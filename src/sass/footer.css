@@ -1,0 +1,16 @@
+.imgFooterDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.imgFooterDiv .imgFooter {
+  width: 100px;
+  position: absolute;
+  bottom: -30px;
+}
+
+.imgAnglia {
+  width: 100px;
+}/*# sourceMappingURL=footer.css.map */
