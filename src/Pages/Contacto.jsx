@@ -47,10 +47,10 @@ const Contacto = () => {
             <img className='imgAnglia' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679514874/ici/Anglia_Logo_2015_No_background_1_2_tlnnnf.png" alt="" />
                 <Card align="starter" sx={{ minWidth: 120, fontFamily: 'Exo', mb:7}}>
                     <CardContent>
-                        <Typography sx={{ fontSize: 20,  fontFamily: 'arial' }} color="#0082C0" gutterBottom>
+                        <Typography sx={{ fontSize: 17,  fontFamily: 'arial' }} color="#0082C0" gutterBottom>
                         I.C.I. PATRICIA ALEMIS
                         </Typography>
-                        <Typography sx={{fontSize:17, mb: 1.5,  fontFamily: 'arial' }} color="#0082C0">
+                        <Typography sx={{fontSize:15, mb: 1.5,  fontFamily: 'arial' }} color="#0082C0">
                         Centro Oficial Anglia Exams
                         </Typography>
                         <Typography sx={{ fontSize:15, fontFamily: 'arial'}} color="#C90A1D" variant="body2">

@@ -1,7 +1,7 @@
 #contacto {
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
   border-top: 10px solid #000289;
-  background-size: 150vh;
+  background-size: 180vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -35,8 +35,8 @@
   flex-direction: row-reverse;
 }
 #divAnglia .imgAnglia {
-  width: 135px;
-  height: 135px;
+  width: 130px;
+  height: 130px;
 }
 
 .whatsapp {
