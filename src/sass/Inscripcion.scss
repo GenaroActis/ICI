@@ -1,0 +1,173 @@
+#inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
+    background-size: 150vh;
+    font-family: 'Exo', sans-serif;
+    padding: 15% 0%;
+    border-top: 10px solid #000289;
+}
+.card {
+    width: 95vw;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card-header {
+    background-color: #000289;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 6px 6px 12px #00000042,
+                -6px -6px 12px #00000042;
+    font-weight: bold;
+}
+
+.card-header .text-header {
+    margin: 0;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1px;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #e8e8e8;
+    box-shadow: 6px 6px 12px #ffffff,
+                -6px -6px 12px #c5c5c5cb;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 17px 24px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #000289;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+
+
+.wrapper{
+    display: inline-flex;
+    background-color: #e8e8e8;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 20px 15px;
+    box-shadow: 6px 6px 12px #ffffff,
+                -6px -6px 12px #c5c5c5cb;
+}
+.wrapper .option{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 2px solid lightgrey;
+    transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+.wrapper .option .dot::before{
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: #000289;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+input[type="radio"]{
+    display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+    border-color: #000289;
+    background: #000289;
+    }
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+    background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.wrapper .option span{
+    font-size: 20px;
+    color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+    color: #fff;
+}
+@media screen and (max-width: 545px){
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0% 10%;
+}
+.wrapper .option{
+    padding: 2.5% 0%;
+}
+}
