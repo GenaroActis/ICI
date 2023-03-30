@@ -164,3 +164,20 @@ input[type="radio"]{
         font-size: 30px;
     }
 }
+@media screen and (max-width: 300px){
+    .form-group label{
+        font-size: 18px;
+    }
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group input[type="text"],
+    .form-group input[type="email"]{
+        font-size: 18px;
+    }
+    .wrapper .option span{
+        font-size: 25px;
+    }
+    .btn{
+        font-size: 25px;
+    }
+}

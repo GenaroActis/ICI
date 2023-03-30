@@ -1,5 +1,22 @@
 
-
+html{
+    font-size: 20px;
+    @media screen and (max-width:1324px){
+        font-size: 15px;
+    }
+    @media screen and (max-width:1024px){
+        font-size: 12px;
+    }
+    @media screen and (max-width: 768px){
+        font-size: 10px;
+    }
+    @media screen and (max-width: 580px){
+        font-size: 8px;
+    }
+    @media screen and (max-width: 420px){
+        font-size: 6px;
+    }
+}
 
 #inputs {
     display: flex;
@@ -50,5 +67,8 @@
 }
 .wrapper .option{
     padding: 2.5% 0%;
+}
+.card{
+    width: 95vw;
 }
 }
