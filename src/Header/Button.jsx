@@ -21,32 +21,24 @@ export default function BasicPopover() {
 
 
     const buttons = [
-        <Button sx={{
-            color: "white",
-            borderColor: 'white',
-            borderRadius: 2,
-            fontSize: 20,
-            }} onClick={handleClose} key="one"><Link className="nav-link" aria-current="page"  to={'/ici'}>Inicio</Link></Button>,
-        <Button sx={{
-            color: "white",
-            borderColor: 'white',
-            fontSize: 20,
-            }} onClick={handleClose} key="two"><Link className="nav-link" aria-current="page"  to={'/ici/inscripcion'}>Inscripcion</Link></Button>,
-        <Button sx={{
-            color: "white",
-            borderColor: 'white',
-            borderRadius: 2,
-            fontSize: 20,
-            }} onClick={handleClose} key="three"><Link className="nav-link" aria-current="page"  to={'/ici/contacto'}>Contacto</Link></Button>,
+        <Button id='buttonPopover' onClick={handleClose} key="one">
+            <Link className="nav-link" aria-current="page"  to={'/ici'}>Inicio</Link>
+        </Button>,
+        <Button id='buttonPopover' onClick={handleClose} key="two">
+            <Link className="nav-link" aria-current="page"  to={'/ici/inscripcion'}>Inscripcion</Link>
+        </Button>,
+        <Button id='buttonPopover' onClick={handleClose} key="three">
+            <Link className="nav-link" aria-current="page"  to={'/ici/contacto'}>Contacto</Link>
+        </Button>,
     ];
 
     return (
-        <div className='button'>
-            <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+        <div id='buttonMenu'>
+            <button id='buttonMenu' aria-describedby={id} variant="contained" onClick={handleClick}>
             Menu
-            </Button>
+            </button>
                 <Popover
-                id={id}
+                id="pichula"
                 classes={{
                     paper: "my-popover",
                 }}
@@ -68,16 +60,11 @@ export default function BasicPopover() {
                 '& > *': {
                     m: 1,
                 },
-                bgcolor: '#000289',
                 }}
             >
                 <ButtonGroup
                 orientation="vertical"
                 aria-label="vertical button group"
-                sx={{
-                    bgcolor: '#000289',
-                    color: "white",
-                    }}
                 >
                 {buttons}
                 </ButtonGroup>

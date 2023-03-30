@@ -1,16 +1,115 @@
-
-.imgFooterDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    .imgFooter {
-        width: 100px;
-        position: absolute;
-        bottom: -30px;
+html{
+    font-size: 20px;
+    @media screen and (max-width:1324px){
+        font-size: 15px;
+    }
+    @media screen and (max-width:1024px){
+        font-size: 12px;
+    }
+    @media screen and (max-width: 768px){
+        font-size: 10px;
+    }
+    @media screen and (max-width: 580px){
+        font-size: 8px;
+    }
+    @media screen and (max-width: 420px){
+        font-size: 6px;
     }
 }
-.imgAnglia{
-    width: 100px;
+
+
+#box{
+    border-top: 10px solid white;
+    #container{
+        padding: 70px 0px 0px 0px;
+        div{
+            .imgFooterDiv{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                .imgFooter {
+                    width: 250px;
+                    position: absolute;
+                    bottom: -25px;
+                }
+            }
+            div{
+                .Coae{
+                    font-size: 2em;
+                    color: white;
+                    font-family: 'Exo', sans-serif;
+                    padding: auto;
+                }
+            }
+            .imgAnglia{
+                width: 100px;
+            }
+        }
+    }
+}
+
+#buttonLink{
+    font-size: 1em;
+    color: white;
+    font-family: 'Exo', sans-serif;
+    border-radius: 2px;
+    border: solid 1px white;
+}
+
+@media screen and (max-width: 1024px){
+    #box{
+        #container{
+            padding-top: 30px;
+            div{
+                div{
+                    .Coae{
+                        padding: 3% 0% 0% 1%;
+                    }
+                }
+                .imgFooterDiv{
+                    .imgFooter {
+                        width: 200px;
+                        bottom: -45px;
+                    }
+                }
+            }
+        }
+    }
+    #buttonLink{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 767px) {
+    #box{
+        #container{
+            padding-top: 10px;
+            div{
+                
+                .imgFooterDiv{
+                    .imgFooter {
+                        width: 150px;
+                        bottom: -42px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    #box{
+        #container{
+            padding-top: 10px;
+            div{
+                .imgFooterDiv{
+                    .imgFooter {
+                        width: 100px;
+                        position: absolute;
+                        bottom: -22px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -14,6 +14,7 @@ import "./sass/index.css"
 import "./sass/footer.css"
 import "./sass/Inscripcion.css"
 import "./sass/contacto.css"
+import "./sass/inputs.css"
 
 function App() {
   return (

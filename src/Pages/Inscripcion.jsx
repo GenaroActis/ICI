@@ -24,7 +24,7 @@ const Inscripcion = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="user_date">Fecha de Nacimiento :</label>
-                        <input required="" className="form-control" name="confirm-password" id="confirm-password" type="date"/>
+                        <input required="" className="form-control" name="user_date" id="user_date" type="date"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="user_address">Dirección :</label>

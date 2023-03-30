@@ -1,16 +1,99 @@
-.imgFooterDiv {
+html {
+  font-size: 20px;
+}
+@media screen and (max-width: 1324px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+#box {
+  border-top: 10px solid white;
+}
+#box #container {
+  padding: 70px 0px 0px 0px;
+}
+#box #container div .imgFooterDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.imgFooterDiv .imgFooter {
-  width: 100px;
+#box #container div .imgFooterDiv .imgFooter {
+  width: 250px;
   position: absolute;
-  bottom: -30px;
+  bottom: -25px;
+}
+#box #container div div .Coae {
+  font-size: 2em;
+  color: white;
+  font-family: "Exo", sans-serif;
+  padding: auto;
+}
+#box #container div .imgAnglia {
+  width: 100px;
 }
 
-.imgAnglia {
-  width: 100px;
+#buttonLink {
+  font-size: 1em;
+  color: white;
+  font-family: "Exo", sans-serif;
+  border-radius: 2px;
+  border: solid 1px white;
+}
+
+@media screen and (max-width: 1024px) {
+  #box #container {
+    padding-top: 30px;
+  }
+  #box #container div div .Coae {
+    padding: 3% 0% 0% 1%;
+  }
+  #box #container div .imgFooterDiv .imgFooter {
+    width: 200px;
+    bottom: -45px;
+  }
+  #buttonLink {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  #box #container {
+    padding-top: 10px;
+  }
+  #box #container div .imgFooterDiv .imgFooter {
+    width: 150px;
+    bottom: -42px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #box #container {
+    padding-top: 10px;
+  }
+  #box #container div .imgFooterDiv .imgFooter {
+    width: 100px;
+    position: absolute;
+    bottom: -22px;
+  }
 }/*# sourceMappingURL=footer.css.map */
