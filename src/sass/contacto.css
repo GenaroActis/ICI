@@ -1,19 +1,9 @@
 html {
-  font-size: 20px;
-}
-@media screen and (max-width: 1324px) {
-  html {
-    font-size: 15px;
-  }
+  font-size: 15px;
 }
 @media screen and (max-width: 1024px) {
   html {
     font-size: 12px;
-  }
-}
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 10px;
   }
 }
 @media screen and (max-width: 580px) {
@@ -29,10 +19,9 @@ html {
 
 #contacto {
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
-  border-top: 10px solid #000289;
   background-size: 200% 100%;
   width: 100%;
-  padding: 5% 0%;
+  padding: 7rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,8 +37,7 @@ html {
   align-items: center;
   justify-content: center;
   margin: 5% 0%;
-  width: 40vw;
-  height: 40vw;
+  height: 500px;
   border: 1px solid #ccc;
   border-radius: 15px;
   background-color: #e8e8e8;
@@ -80,11 +68,11 @@ html {
 }
 
 #text5 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #text6 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 #divAnglia {
@@ -92,13 +80,13 @@ html {
   flex-direction: row-reverse;
 }
 #divAnglia .imgAnglia {
-  width: 20vw;
-  height: 20vw;
+  width: 170px;
+  height: 170px;
 }
 #divAnglia #card2 {
   flex: 1;
-  height: 20vw;
   width: auto;
+  height: 170px;
 }
 
 #whatsapp {
@@ -125,7 +113,7 @@ html {
   border-radius: 70px;
   text-align: center;
   font-size: 70px;
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1490196078), -6px -6px 12px rgba(0, 0, 0, 0.1490196078);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5333333333);
   z-index: 100;
   margin-left: 10px;
 }
@@ -138,24 +126,9 @@ html {
   background-color: #125129;
 }
 
-@media screen and (max-width: 1324px) {
-  #contacto #iframe {
-    width: 60vw;
-    height: 60vw;
-  }
-}
 @media screen and (max-width: 1024px) {
   #whatsapp {
     font-size: 45px;
-  }
-  #divAnglia .imgAnglia {
-    width: 170px;
-    height: 170px;
-  }
-  #divAnglia #card2 {
-    flex: 1;
-    width: auto;
-    height: 170px;
   }
 }
 @media screen and (max-width: 768px) {

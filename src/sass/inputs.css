@@ -130,6 +130,23 @@ input[type="radio"]{
 #option-2:checked:checked ~ .option-2 span{
     color: #fff;
 }
+@media screen and (max-width: 1567px){
+    .form-group label{
+        font-size: 20px;
+    }
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group input[type="text"],
+    .form-group input[type="email"]{
+        font-size: 20px;
+    }
+    .wrapper .option span{
+        font-size: 35px;
+    }
+    .btn{
+        font-size: 35px;
+    }
+}
 @media screen and (max-width: 1024px){
     .form-group label{
         font-size: 25px;

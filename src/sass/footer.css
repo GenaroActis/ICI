@@ -1,5 +1,5 @@
 html {
-  font-size: 20px;
+  font-size: 18px;
 }
 @media screen and (max-width: 1324px) {
   html {
@@ -27,24 +27,6 @@ html {
   }
 }
 
-#box {
-  border-top: 10px solid white;
-}
-#box #container {
-  padding: 70px 0px 0px 0px;
-}
-#box #container div .imgFooterDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-#box #container div .imgFooterDiv .imgFooter {
-  width: 250px;
-  position: absolute;
-  bottom: -25px;
-}
 #box #container div div .Coae {
   font-size: 2em;
   color: white;
@@ -53,6 +35,20 @@ html {
 }
 #box #container div .imgAnglia {
   width: 100px;
+}
+
+#imgFooterDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10px;
+  background-color: white;
+}
+#imgFooterDiv #imgFooter {
+  width: 250px;
+  position: absolute;
 }
 
 #buttonLink {
@@ -64,36 +60,10 @@ html {
 }
 
 @media screen and (max-width: 1024px) {
-  #box #container {
-    padding-top: 30px;
-  }
   #box #container div div .Coae {
     padding: 3% 0% 0% 1%;
   }
-  #box #container div .imgFooterDiv .imgFooter {
-    width: 200px;
-    bottom: -45px;
-  }
   #buttonLink {
     font-size: 2em;
-  }
-}
-@media screen and (max-width: 767px) {
-  #box #container {
-    padding-top: 10px;
-  }
-  #box #container div .imgFooterDiv .imgFooter {
-    width: 150px;
-    bottom: -42px;
-  }
-}
-@media screen and (max-width: 420px) {
-  #box #container {
-    padding-top: 10px;
-  }
-  #box #container div .imgFooterDiv .imgFooter {
-    width: 100px;
-    position: absolute;
-    bottom: -22px;
   }
 }/*# sourceMappingURL=footer.css.map */

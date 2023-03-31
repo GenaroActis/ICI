@@ -13,39 +13,42 @@ const buttons = [
 const Footer = () => {
     return (
         <>
-        <Box
-        id="box"
-        sx={{
-        width: "100%",
-        height: "auto",
-        backgroundColor: "#000289",
-        paddingTop: "1rem",
-        paddingBottom: "1rem",
-        }}
-        >
-        <Container id="container" maxWidth="lg">
-            <Grid container direction="column" alignItems="center">
-                <div className='imgFooterDiv'>
-                    <img src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679510940/ici/logoicipng_zbsdom.png" className='imgFooter' alt="" />
-                </div>
-                <Grid container direction="column" className='mb-1 pt-4' alignItems="center">
-                    <h2 className='Coae'>
-                        Centro Oficial Anglia Exams
-                    </h2>
-                </Grid>
-                <ButtonGroup
-                    orientation="horizontal"
-                    aria-label="vertical button group"
-                    sx={{
-                        bgcolor: '#000289',
-                        color: "white",
-                        }}
-                    >
-                    {buttons}
-                </ButtonGroup>
-            </Grid>
-        </Container>
-    </Box>
+        <div className='d-flex flex-column align-items-center'>
+            <div id='imgFooterDiv' className='col-4 col-md-5 col-lg-4 col-xl-3 col-xxl-2'>
+                <img src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680291150/ici/logoicipng_unfb1t.png" className='img-fluid' id='imgFooter' alt="" />
+            </div>
+            <Box
+            id="box"
+            sx={{
+            width: "100%",
+            height: "auto",
+            backgroundColor: "#000289",
+            paddingTop: "5rem",
+            paddingBottom: "1rem",
+            }}
+            >
+                <Container id="container" maxWidth="lg">
+                    <Grid container direction="column" alignItems="center">
+                        
+                        <Grid container direction="column" className='mb-1 pt-4 pb-1' alignItems="center">
+                            <h2 className='Coae'>
+                                Centro Oficial Anglia Exams
+                            </h2>
+                        </Grid>
+                        <ButtonGroup
+                            orientation="horizontal"
+                            aria-label="vertical button group"
+                            sx={{
+                                bgcolor: '#000289',
+                                color: "white",
+                                }}
+                            >
+                            {buttons}
+                        </ButtonGroup>
+                    </Grid>
+                </Container>
+            </Box>
+    </div>
         </>
     )
 }

@@ -1,5 +1,5 @@
 html{
-    font-size: 20px;
+    font-size: 18px;
     @media screen and (max-width:1324px){
         font-size: 15px;
     }
@@ -19,22 +19,9 @@ html{
 
 
 #box{
-    border-top: 10px solid white;
     #container{
-        padding: 70px 0px 0px 0px;
         div{
-            .imgFooterDiv{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                .imgFooter {
-                    width: 250px;
-                    position: absolute;
-                    bottom: -25px;
-                }
-            }
+            
             div{
                 .Coae{
                     font-size: 2em;
@@ -49,7 +36,20 @@ html{
         }
     }
 }
-
+#imgFooterDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 10px;
+    background-color: white;
+    #imgFooter {
+        width: 250px;
+        position: absolute;
+        // top: -130px;
+    }
+}
 #buttonLink{
     font-size: 1em;
     color: white;
@@ -58,20 +58,16 @@ html{
     border: solid 1px white;
 }
 
+
+
+
 @media screen and (max-width: 1024px){
     #box{
         #container{
-            padding-top: 30px;
             div{
                 div{
                     .Coae{
                         padding: 3% 0% 0% 1%;
-                    }
-                }
-                .imgFooterDiv{
-                    .imgFooter {
-                        width: 200px;
-                        bottom: -45px;
                     }
                 }
             }
@@ -81,35 +77,12 @@ html{
         font-size: 2em;
     }
 }
-@media screen and (max-width: 767px) {
-    #box{
-        #container{
-            padding-top: 10px;
-            div{
-                
-                .imgFooterDiv{
-                    .imgFooter {
-                        width: 150px;
-                        bottom: -42px;
-                    }
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 420px) {
-    #box{
-        #container{
-            padding-top: 10px;
-            div{
-                .imgFooterDiv{
-                    .imgFooter {
-                        width: 100px;
-                        position: absolute;
-                        bottom: -22px;
-                    }
-                }
-            }
-        }
-    }
-}
+// @media screen and (max-width: 767px) {
+//     #imgFooterDiv{
+//         #imgFooter {
+//             position: relative;
+//             width: 120px;
+//         }
+//     }
+// }
+

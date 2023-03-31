@@ -1,3 +1,4 @@
+
 #img-anglia{
     position: fixed;
     right: -125px;
@@ -7,11 +8,22 @@
     z-index: 999;
 }
 #header{
+    font-size: 15px;
+    @media screen and (max-width:1324px){
+        font-size: 15px;
+    }
+    @media screen and (max-width:1024px){
+        font-size: 14px;
+    }
+    @media screen and (max-width: 420px){
+        font-size: 11px;
+    }
     div{
         display: flex;
         align-items: center;
         padding: 10px;
         justify-content: center;
+        padding: 0%;
         img{
             margin-bottom: 70px;
             box-shadow:
@@ -20,12 +32,12 @@
             border-radius: 1%;
         }
     }
-    #buttonMenu{
-        position: relative;
+    #buttonMenuDiv{
+        height: 10px;
+        width: 100%;
+        background-color: #000289;
         #buttonMenu{
-            position: absolute;
-            top: -40%;
-            font-size: 20px;
+            font-size: 1.5em;
             padding: 1em 3.3em;
             transform: perspective(200px) rotateX(15deg);
             color: white;
@@ -34,7 +46,6 @@
             border: none;
             border-radius: 5px;
             background: #000289;
-            box-shadow: #00000097 0px 5px 30px 0px;
             will-change: transform;
             transition: all 0.3s;
             border-bottom: 2px solid #000262;
@@ -43,11 +54,11 @@
     }
 }
 
-.button:hover {
+#header #buttonMenuDiv #buttonMenu:hover {
     transform: perspective(180px) rotateX(30deg) translateY(2px);
 }
 
-.button:active {
+#header #buttonMenuDiv #buttonMenu:active {
     transform: perspective(170px) rotateX(36deg) translateY(5px);
 }
 div{
@@ -65,7 +76,7 @@ div{
             border-radius: 10px;
             border: 5px solid rgba(255, 255, 255, 0);
             font-family: 'Exo', sans-serif;
-            font-size: 40px;
+            font-size: 3em;
             box-shadow: inset 0 0 10px #00000088;
             text-transform: capitalize;
         }
@@ -87,47 +98,9 @@ div{
     }
 }
 
-@media screen and (max-width:1324px){
-}
-@media screen and (max-width:1024px){
-    #header{
-        #buttonMenu{
-            #buttonMenu{
-                font-size: 16px;
-                top: -10%;
-            }
-        }
-    }
-    div{
-        .my-popover{
-            #buttonPopover{
-                font-size: 36px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 768px){
-}
-@media screen and (max-width: 580px){
-}
 @media screen and (max-width: 420px){
     #img-anglia{
         right: -105px;
         width: 170px;
-    }
-    #header{
-        #buttonMenu{
-            #buttonMenu{
-                font-size: 14px;
-                top:10%;
-            }
-        }
-    }
-    div{
-        .my-popover{
-            #buttonPopover{
-                font-size: 24px;
-            }
-        }
     }
 }

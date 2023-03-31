@@ -33,12 +33,12 @@ export default function BasicPopover() {
     ];
 
     return (
-        <div id='buttonMenu'>
+        <div id='buttonMenuDiv'>
             <button id='buttonMenu' aria-describedby={id} variant="contained" onClick={handleClick}>
             Menu
             </button>
                 <Popover
-                id="pichula"
+                id="Popover"
                 classes={{
                     paper: "my-popover",
                 }}

@@ -2,23 +2,7 @@
   display: flex;
   flex-direction: column;
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
-  border-top: 10px solid #000289;
   background-size: 200% 100%;
   align-items: center;
-  padding: 10% 0%;
-}
-#index img {
-  padding: 0% 10%;
-  width: 60vw;
-}
-
-@media screen and (max-width: 1024px) {
-  #index img {
-    width: 80vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  #index img {
-    width: 100vw;
-  }
+  padding: 7rem 0rem;
 }/*# sourceMappingURL=index.css.map */
