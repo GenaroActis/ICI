@@ -34,16 +34,15 @@ html {
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
   background-size: 200% 100%;
   font-family: "Exo", sans-serif;
-  padding: 7rem 0%;
+  padding: 7rem 0rem;
 }
 
 .card {
-  width: 700px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 10px;
+  margin: 5px;
 }
 
 .card-header {
@@ -58,23 +57,12 @@ html {
   font-weight: bold;
 }
 
-@media screen and (max-width: 1467px) {
-  #inputs .card {
-    width: 650px;
-  }
-}
 @media screen and (max-width: 1224px) {
-  .card {
-    width: 600px;
-  }
   #inputs {
     padding: 12% 0%;
   }
 }
 @media screen and (max-width: 767px) {
-  .card {
-    width: 500px;
-  }
   #inputs {
     padding: 100px 0px;
   }
@@ -88,7 +76,9 @@ html {
   .wrapper .option {
     padding: 2.5% 0%;
   }
+}
+@media screen and (max-width: 407px) {
   .card {
-    width: 95vw;
+    width: 97vw;
   }
 }/*# sourceMappingURL=Inscripcion.css.map */

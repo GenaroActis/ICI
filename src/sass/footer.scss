@@ -16,8 +16,6 @@ html{
         font-size: 6px;
     }
 }
-
-
 #box{
     #container{
         div{
@@ -47,7 +45,6 @@ html{
     #imgFooter {
         width: 250px;
         position: absolute;
-        // top: -130px;
     }
 }
 #buttonLink{
@@ -57,10 +54,6 @@ html{
     border-radius: 2px;
     border: solid 1px white;
 }
-
-
-
-
 @media screen and (max-width: 1024px){
     #box{
         #container{
@@ -77,12 +70,9 @@ html{
         font-size: 2em;
     }
 }
-// @media screen and (max-width: 767px) {
-//     #imgFooterDiv{
-//         #imgFooter {
-//             position: relative;
-//             width: 120px;
-//         }
-//     }
-// }
+@media screen and (max-width: 300px){
+    #buttonLink {
+        font-size: 1.5em;
+    }
+}
 

@@ -16,6 +16,11 @@ html {
     font-size: 6px;
   }
 }
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 5px;
+  }
+}
 
 #contacto {
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
@@ -202,6 +207,9 @@ html {
     flex: 1;
     width: auto;
     height: 100px;
+  }
+  #card div {
+    padding: 10px;
   }
 }
 @media screen and (max-width: 300px) {

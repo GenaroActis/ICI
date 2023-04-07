@@ -9,9 +9,10 @@ html{
     @media screen and (max-width: 420px){
         font-size: 6px;
     }
+    @media screen and (max-width: 300px){
+        font-size: 5px;
+    } 
 }
-
-
 #contacto{
     background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
     background-size: 200% 100%;
@@ -209,6 +210,11 @@ background-color: #125129;
             height: 100px; 
         }
     }
+    #card{
+        div{
+            padding:10px;
+        }
+    }
 }
 
 @media screen and (max-width:300px){
@@ -228,4 +234,5 @@ background-color: #125129;
             height: 100px; 
         }
     }
+    
 }

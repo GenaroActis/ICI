@@ -66,4 +66,9 @@ html {
   #buttonLink {
     font-size: 2em;
   }
+}
+@media screen and (max-width: 300px) {
+  #buttonLink {
+    font-size: 1.5em;
+  }
 }/*# sourceMappingURL=footer.css.map */
