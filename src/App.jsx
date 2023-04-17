@@ -3,6 +3,9 @@ import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 import Contacto from "./Pages/Contacto";
 import Inscripcion from "./Pages/Inscripcion";
+import Viajes from "./Pages/Viajes"
+import Examenes from "./Pages/Examenes"
+import Cursos from "./Pages/Cursos"
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import SideBar from "./Header/SideBar"
 import CartProvider from './Context/Context'
@@ -30,8 +33,10 @@ function App() {
             <Route exact path="/ici" element={<Index/>}/>
             <Route exact path="/ici/inscripcion" element={<Inscripcion/>}/>
             <Route exact path="/ici/contacto" element={<Contacto/>}/>
+            <Route exact path="/ici/viajes" element={<Viajes/>}/>
+            <Route exact path="/ici/examenes" element={<Examenes/>}/>
+            <Route exact path="/ici/cursos" element={<Cursos/>}/>
           </Routes>
-
           <Footer/>
         </div>
       </CartProvider>

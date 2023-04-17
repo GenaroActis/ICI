@@ -1,6 +1,6 @@
 .header-img {
   position: relative;
-  top: 30px;
+  top: 20px;
 }
 
 .div-img-anglia {
@@ -17,6 +17,8 @@
   border-radius: 5px;
   box-shadow: 0px 6px 0px #000262;
   transition: all 0.1s;
+  text-align: center;
+  width: auto;
 }
 .div-nav-link .nav-link {
   color: white;
@@ -65,7 +67,7 @@
   width: 100%;
   border-radius: 5px;
   background-color: #000289;
-  font-size: 3em;
+  font-size: 2.5em;
   z-index: 999;
   box-shadow: none;
   border: none;
@@ -82,18 +84,22 @@
 }
 
 #header {
-  background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
   font-size: 15px;
   background-size: 200%;
 }
+@media screen and (max-width: 1650px) {
+  #header {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 1324px) {
   #header {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 1200px) {
   #header {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 1070px) {
@@ -101,9 +107,9 @@
     font-size: 11px;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 767px) {
   #header {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 #header .imgdiv img {
@@ -112,7 +118,7 @@
 }
 #header .text-end {
   position: relative;
-  left: 90px;
+  left: 10%;
 }
 #header .text-end #divAnglia .card {
   text-align: left;
@@ -153,6 +159,11 @@ div .my-popover #buttonPopover {
   text-transform: capitalize;
 }
 
+#root {
+  position: relative;
+  overflow-x: hidden;
+}
+
 .activeSideBarRoot {
   overflow: hidden !important;
   position: relative !important;
@@ -162,9 +173,9 @@ div .my-popover #buttonPopover {
   position: fixed;
   left: 0;
   top: 0;
-  width: 200px;
+  width: auto;
   height: 100%;
-  z-index: 999;
+  z-index: 900;
   overflow: hidden !important;
   transform: translate3d(0, 0, 0);
 }
@@ -172,10 +183,32 @@ div .my-popover #buttonPopover {
   width: 200px;
   height: 100%;
 }
-
-.content {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.3s ease-out;
+#sideBar #sideBarDiv .exitButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  width: 50px;
+  height: auto;
+}
+#sideBar #sideBarDiv .exitButton svg {
+  width: 100%;
+  height: 100%;
+  color: #000289;
+}
+#sideBar #sideBarDiv .menuSpan {
+  font-size: 25px;
+  font-weight: 800;
+  color: #000289;
+}
+#sideBar #sideBarDiv .div-nav-link {
+  font-size: 15px;
+}
+#sideBar #sideBarDiv hr {
+  color: #000289;
+  border-top: 5px #000289 solid;
+  width: 100%;
 }
 
 .activeSideBar {
@@ -198,29 +231,101 @@ div .my-popover #buttonPopover {
     transform: scaleY(1);
   }
 }
-@media screen and (max-width: 1200px) {
-  #header {
-    width: 100%;
+@media screen and (max-width: 1650px) {
+  #header .text-end {
+    left: 8%;
+  }
+}
+@media screen and (max-width: 1550px) {
+  #buttonsHeader {
+    flex-direction: column;
+    align-items: center;
   }
   #header .text-end {
-    left: 60px;
+    left: 3%;
+  }
+}
+@media screen and (max-width: 1266px) {
+  #header .text-end {
+    left: 0px;
   }
   #header .container {
     max-width: 100%;
     --bs-gutter-x: 0rem;
   }
   #header header {
-    width: 100%;
+    padding: 0% 10px;
+  }
+  #header .imgdiv img {
+    position: relative;
+    left: 100px;
   }
 }
 @media screen and (max-width: 1070px) {
-  #header {
-    width: 100%;
-  }
-  #header .text-end {
-    left: 50px;
-  }
   .header-img {
-    top: 20px;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 840px) {
+  #header header {
+    padding: 0% 5px;
+  }
+  #header .text-end #divAnglia .card h1 {
+    font-size: 1em;
+  }
+  #header .text-end #divAnglia .card h2 {
+    font-size: 0.8em;
+  }
+  #header .text-end #divAnglia .card h3 {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 767px) {
+  #header .text-end {
+    position: relative;
+    left: 0%;
+  }
+  #header .imgdiv img {
+    left: 0px;
+  }
+  .text-end {
+    display: block;
+    position: fixed;
+    bottom: -0.5%;
+    z-index: 999;
+    right: 0px;
+    opacity: 90%;
+  }
+  .text-end #divAnglia {
+    flex-direction: row;
+    right: 0px;
+  }
+  .text-end #divAnglia .card {
+    position: relative;
+    text-align: left;
+    margin: 0px;
+    width: auto;
+    justify-content: space-evenly;
+  }
+  .text-end #divAnglia .card h1 {
+    font-size: 1.2em;
+    color: #0082C0;
+  }
+  .text-end #divAnglia .card h2 {
+    font-size: 1em;
+    color: #0082C0;
+  }
+  .text-end #divAnglia .card h3 {
+    font-size: 1em;
+    color: #DA291C;
+  }
+}
+@media screen and (max-width: 330px) {
+  .text-end {
+    display: block;
+    position: fixed;
+    bottom: 0%;
+    z-index: 999;
+    opacity: 95%;
   }
 }/*# sourceMappingURL=header.css.map */

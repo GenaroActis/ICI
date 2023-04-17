@@ -1,40 +1,39 @@
 import React, { useState, useContext } from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import {Context} from "../Context/Context"
+import {Context} from "../Context/Context";
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBars, faPenToSquare, faHouse, faAddressCard, faPlane, faFileSignature, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     let {sideBarOpen} = useContext(Context)
+    
     return (
         <>
         <div id='header'>
             <div className="container flex-column">
-                <div className='header-img col-4 col-lg-4 col-xxl-3 mx-auto'>
+                <div className='header-img col-6 col-sm-4 col-lg-4 col-xxl-3 mx-auto my-2'>
                     <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612964/ici/insti_v0n4zi.png" alt="" />
                 </div>
-                <header className="d-flex align-items-center justify-content-center justify-content-around pt-3 mb-4">
-                    <div className="col-1 col-md-1 col-xxl-1">
+                <header className="d-flex align-items-center justify-content-sm-evenly justify-content-md-between justify-content-center py-sm-4 py-5 mb-4">
+                    <div className="col-2 col-md-1 py-2 col-xxl-1">
                         <a href="/ici" className="d-inline-flex link-body-emphasis text-decoration-none">
-                        <div className='imgdiv' width="40" height="32" role="img" aria-label="Bootstrap"><img className='img-fluid rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612599/ici/logoweb_bbapg5.png" alt="" /></div>
+                        <div className='imgdiv' role="img" aria-label="Bootstrap"><img className='img-fluid rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612599/ici/logoweb_bbapg5.png" alt="" /></div>
                         </a>
                     </div>
-                    <ul className="nav d-none d-md-flex col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li className='div-nav-link m-1 d-flex align-items-center'><a href="#" className="nav-link p-2">INICIO</a></li>
-                        <li className='div-nav-link d-lg-block d-none m-1'><a href="#" className="nav-link p-2">INSCRIPCION</a></li>
-                        <li className='div-nav-link d-lg-block d-none m-1'><a href="#" className="nav-link p-2">CONTACTO</a></li>
-                        <li className='div-nav-link d-lg-block d-none m-1'><a href="#" className="nav-link p-2">VIAJES</a></li>
-                        <li className='div-nav-link d-lg-block d-none m-1'><a href="#" className="nav-link p-2">EXAMENES</a></li>
-                        <DropdownButton id='dropDownBtn' className="div-nav-link d-block d-lg-none m-1" variant="none" title="Menu">
-                            <Dropdown.Item eventKey="1"><a href="#" className="nav-link p-2">VIAJES</a></Dropdown.Item>
-                            <Dropdown.Item eventKey="2"><a href="#" className="nav-link p-2">EXAMENES</a></Dropdown.Item>
-                        </DropdownButton>
-                        <DropdownButton id='dropDownBtn' className="div-nav-link d-block d-lg-none m-1" variant="none" title="Servicios">
-                            <Dropdown.Item eventKey="1"><a href="#" className="nav-link p-2">VIAJES</a></Dropdown.Item>
-                            <Dropdown.Item eventKey="2"><a href="#" className="nav-link p-2">EXAMENES</a></Dropdown.Item>
-                        </DropdownButton>
+                    <ul id='buttonsHeader' className="nav d-none d-md-flex col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                        <div className='d-flex mt-2'>
+                            <li className='div-nav-link d-md-block d-none m-1 py-2'><Link to={'/ici'} className="nav-link p-2 d-flex inicio">INICIO<FontAwesomeIcon icon={faHouse} className='ms-2' /></Link></li>
+                            <li className='div-nav-link d-md-block d-none m-1 py-2'><Link to={'/ici/inscripcion'} className="nav-link d-flex p-2 inscripcion">INSCRIPCION<FontAwesomeIcon icon={faPenToSquare} className='ms-2'/></Link></li>
+                            <li className='div-nav-link d-md-block d-none m-1 py-2'><Link to={'/ici/contacto'} className="nav-link d-flex p-2 contacto">CONTACTO<FontAwesomeIcon icon={faAddressCard} className='ms-2'/></Link></li>
+                        </div>
+                        <div className='d-flex mt-2'>
+                            <li className='div-nav-link d-md-block d-none m-1 py-2'><Link to={'/ici/viajes'} className="nav-link d-flex p-2 viajes">VIAJES<FontAwesomeIcon icon={faPlane} className='ms-2'/></Link></li>
+                            <li className='div-nav-link d-md-block d-none m-1 py-2'><Link to={'/ici/examenes'} className="nav-link d-flex p-2 examenes">EXAMENES<FontAwesomeIcon icon={faFileSignature} className='ms-2'/></Link></li>
+                            <li className='div-nav-link d-md-block d-none m-1 py-2'><Link to={'/ici/cursos'} className="nav-link d-flex p-2 cursos">CURSOS<FontAwesomeIcon icon={faGraduationCap} className='ms-2'/></Link></li>
+                        </div>
                     </ul>
-                    <div className="col-1 col-md-1 col-xxl-1 text-end">
-                        <div id='divAnglia'>
+                    <div className="d-none d-md-block col-2 col-sm-1 col-md-1 col-xxl-1 text-end">
+                        <div id='divAnglia' className='d-flex flex-row-reverse flex-sm-row flex-md-row-reverse'>
                             <div className='div-img-anglia'>
                                 <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679514874/ici/Anglia_Logo_2015_No_background_1_2_tlnnnf.png" alt="" />
                             </div>
@@ -52,12 +51,12 @@ const Header = () => {
                         </div>
                     </div>
                 </header>
-                <div className='borderHeader'>
-                    <div className='div-nav-link d-flex d-md-none menuMovileDiv'>
-                        <button className='nav-link d-flex flex-row menuMovile p-4' onClick={() => sideBarOpen() } >MENU
-                        <i className="fi fi-br-menu-burger"></i>
-                        </button>
-                    </div>
+            </div>
+            <div  onClick={() => sideBarOpen() }  className='borderHeader'>
+                <div className='div-nav-link d-flex d-md-none menuMovileDiv'>
+                    <button className='nav-link d-flex flex-row menuMovile p-4' >MENU
+                    <FontAwesomeIcon icon={faBars} className='ms-2' />
+                    </button>
                 </div>
             </div>
         </div>

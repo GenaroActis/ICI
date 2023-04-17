@@ -58,7 +58,7 @@ const Inscripcion = () => {
                             </label>
                         </div>
                     </div>
-                        <input type="submit" className="btn" value="Inscribirse"/>
+                        <input type="submit" className="btn2" value="Inscribirse"/>
                     </form>
                 </div>
             </div>
