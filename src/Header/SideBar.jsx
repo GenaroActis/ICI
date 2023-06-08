@@ -1,11 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import {Context} from "../Context/Context"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRectangleXmark, faPenToSquare, faHouse, faAddressCard, faPlane, faFileSignature, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 const SideBar = () => {
     let {open, sideBarOpen} = useContext(Context)
-    
+    const [showCard, setShowCard] = useState(true);
+    useEffect(() => {
+        const handleScroll = () => {
+        const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+        setShowCard(!isBottom);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+        }, []);
         return (
             <>
             <div id='sideBar' className='d-flex d-md-none'>
@@ -29,7 +39,9 @@ const SideBar = () => {
                         <hr/>
                     </div> 
                 : null}
-                </div>
+            </div>
+            
+            <div className={`fades ${showCard ? '' : 'hide'}`}>
                 <div className="d-block d-md-none col-3 text-end">
                     <div className='divAnglia d-flex flex-row-reverse'>
                             <div className='div-img-anglia'>
@@ -48,6 +60,7 @@ const SideBar = () => {
                             </div>
                         </div>
                 </div>
+            </div>
             </>
         )
     }

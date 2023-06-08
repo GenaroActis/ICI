@@ -175,17 +175,19 @@
 #index{
     overflow: hidden;
 }
-@keyframes growDown {
-    0% {
-        transform: scaleY(0)
-    }
-    80% {
-        transform: scaleY(1.1)
-    }
-    100% {
-        transform: scaleY(1)
-    }
+@keyframes opacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
+
+.fade {
+    opacity: 1 !important;
+}
+.hide {
+    transition: opacity 3s ease-out;
+    visibility: hidden;
+}
+
 @media screen and (max-width:1650px){
     #header{
         .text-end{
@@ -251,7 +253,7 @@
         }
     }
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
     #header{
         .text-end{
             position: relative;
@@ -271,6 +273,7 @@
         left: null;
         right: 0%;
         opacity: 90%;
+        width: 15%;
         .divAnglia{
             flex-direction: row;
             .card{
@@ -280,27 +283,41 @@
                 width: auto;
                 justify-content: space-evenly;
                 h1{
-                    font-size: 2.2em;
+                    font-size: 1.8em;
                     color: #0082C0;
                 }
                 h2{
-                    font-size: 1.8em;
+                    font-size: 1.4em;
                     color: #0082C0;
                 }
                 h3{
-                    font-size: 1.8em;
+                    font-size: 1.4em;
                     color: #DA291C;
                 }
             }
         }
     }
 }
-@media screen and (max-width:330px){
+@media screen and (max-width:576px){
     .text-end{
         display: block;
         position: fixed;
         bottom: 0%;
         z-index: 999;
         opacity: 95%;
+        width: 20%;
+        .divAnglia{
+            .card{
+                h1{
+                    font-size: 2.5em;
+                }
+                h2{
+                    font-size: 2em;
+                }
+                h3{
+                    font-size: 2em;
+                }
+            }
+        }
     }
 }
