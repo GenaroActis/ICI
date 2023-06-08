@@ -12,6 +12,9 @@ html{
     @media screen and (max-width: 300px){
         font-size: 5px;
     } 
+    @media screen and (max-width: 250px){
+        font-size: 4px;
+    } 
 }
 #contacto{
     background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
@@ -96,6 +99,9 @@ html{
     padding: 1%;
     font-weight: bold;
     font-family: 'Exo', sans-serif;
+    h2{
+        font-size: 0.8em;
+    }
     .whatsapp {
         position:relative;
         width:95px;
@@ -196,9 +202,6 @@ background-color: #125129;
     }
 }
 @media screen and (max-width: 420px){
-    #whatsapp{
-        font-size: 25px;
-    }
     #divAnglia{
         .imgAnglia{
             width: 100px;
@@ -219,7 +222,9 @@ background-color: #125129;
 
 @media screen and (max-width:300px){
     #whatsapp{
-        font-size: 20px;
+        h2{
+            font-size: 0.6em;
+        }
     }
     #divAnglia{
         flex-direction: column;

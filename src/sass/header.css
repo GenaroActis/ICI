@@ -19,7 +19,7 @@
 }
 .div-nav-link .nav-link {
   color: white;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .div-nav-link:active {
@@ -147,12 +147,13 @@
   z-index: 900;
   overflow-x: hidden !important;
   transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 10px black;
 }
-#sideBar #sideBarDiv {
-  width: auto;
+#sideBar .sideBarDiv {
+  width: 42vw;
   height: 100%;
 }
-#sideBar #sideBarDiv .exitButton {
+#sideBar .sideBarDiv .exitButton {
   background: none;
   color: inherit;
   border: none;
@@ -161,27 +162,24 @@
   width: 50px;
   height: auto;
 }
-#sideBar #sideBarDiv .exitButton svg {
+#sideBar .sideBarDiv .exitButton svg {
   width: 100%;
   height: 100%;
   color: #000289;
 }
-#sideBar #sideBarDiv .menuSpan {
+#sideBar .sideBarDiv .menuSpan {
   font-size: 25px;
   font-weight: 800;
   color: #000289;
 }
-#sideBar #sideBarDiv .div-nav-link {
-  font-size: 15px;
-}
-#sideBar #sideBarDiv hr {
+#sideBar .sideBarDiv hr {
   color: #000289;
   border-top: 5px #000289 solid;
   width: 100%;
 }
 
 .activeSideBar {
-  transform: translate3d(200px, 0px, 0px) !important;
+  transform: translate3d(42vw, 0px, 0px) !important;
   overflow: hidden !important;
 }
 
@@ -295,7 +293,7 @@
     color: #DA291C;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 580px) {
   .text-end {
     display: block;
     position: fixed;
@@ -312,5 +310,37 @@
   }
   .text-end .divAnglia .card h3 {
     font-size: 2em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .activeSideBar {
+    transform: translate3d(66vw, 0px, 0px) !important;
+    overflow: hidden !important;
+  }
+  #sideBar .sideBarDiv {
+    width: 66vw;
+  }
+  #sideBar .sideBarDiv .nav .div-nav-link {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  #sideBar .sideBarDiv .nav .div-nav-link .nav-link {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 260px) {
+  .activeSideBar {
+    transform: translate3d(75vw, 0px, 0px) !important;
+    overflow: hidden !important;
+  }
+  #sideBar .sideBarDiv {
+    width: 75vw;
+  }
+  #sideBar .sideBarDiv .nav .div-nav-link {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+  }
+  #sideBar .sideBarDiv .nav .div-nav-link .nav-link {
+    font-size: 5em;
   }
 }/*# sourceMappingURL=header.css.map */
