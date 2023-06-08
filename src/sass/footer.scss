@@ -16,63 +16,34 @@ html{
         font-size: 6px;
     }
 }
-#box{
-    #container{
-        div{
-            
-            div{
-                .Coae{
-                    font-size: 2em;
-                    color: white;
-                    font-family: 'Exo', sans-serif;
-                    padding: auto;
-                }
-            }
-            .imgAnglia{
-                width: 100px;
-            }
+.footer {
+    .imgFooterDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: white;
+        margin-bottom: 4%;
+        .imgFooter {
+            position: absolute;
         }
     }
-}
-#imgFooterDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 10px;
-    background-color: white;
-    #imgFooter {
-        width: 250px;
-        position: absolute;
-    }
-}
-#buttonLink{
-    font-size: 1em;
-    color: white;
-    font-family: 'Exo', sans-serif;
-    border-radius: 2px;
-    border: solid 1px white;
-}
-@media screen and (max-width: 1024px){
-    #box{
-        #container{
-            div{
-                div{
-                    .Coae{
-                        padding: 3% 0% 0% 1%;
-                    }
+    .container{
+        .nav{
+            .nav-item{
+                .nav-link{
+                    color: #000289;
                 }
             }
         }
     }
-    #buttonLink{
-        font-size: 2em;
-    }
 }
-@media screen and (max-width: 300px){
-    #buttonLink {
-        font-size: 1.5em;
-    }
+.direc{
+    text-decoration: underline white;
+    color: black;
 }
+
+
+
 

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRectangleXmark, faPenToSquare, faHouse, faAddressCard, faPlane, faFileSignature, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 const SideBar = () => {
     let {open, sideBarOpen} = useContext(Context)
-
+    
         return (
             <>
             <div id='sideBar' className='d-flex d-md-none'>
@@ -30,8 +30,8 @@ const SideBar = () => {
                     </div> 
                 : null}
                 </div>
-                <div className="d-flex d-md-none col-2 text-end">
-                    <div id='divAnglia' className='d-flex flex-row-reverse'>
+                <div className="d-block d-md-none col-3 text-end">
+                    <div className='divAnglia d-flex flex-row-reverse'>
                             <div className='div-img-anglia'>
                                 <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679514874/ici/Anglia_Logo_2015_No_background_1_2_tlnnnf.png" alt="" />
                             </div>

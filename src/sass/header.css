@@ -1,12 +1,9 @@
-.header-img {
-  position: relative;
-  top: 20px;
-}
-
 .div-img-anglia {
   flex: 0 0 auto;
   width: 100%;
   height: auto;
+  display: flex;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 .div-img-anglia img {
   width: 100%;
@@ -23,19 +20,6 @@
 .div-nav-link .nav-link {
   color: white;
   font-size: 1.5em;
-}
-
-#dropDownBtn {
-  color: white;
-  margin: 0px;
-  font-size: 1.5em;
-  line-height: 162%;
-  vertical-align: baseline;
-  background-color: #000289;
-  border-radius: 5px;
-  padding: 0.5rem !important;
-  box-shadow: 0px 6px 0px #000262;
-  transition: all 0.1s;
 }
 
 .div-nav-link:active {
@@ -56,14 +40,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10px;
+  height: 4px;
 }
-.borderHeader .menuMovileDiv {
+
+.menuMovileDiv {
   transform: perspective(200px) rotateX(15deg);
   position: relative;
   bottom: 5px;
 }
-.borderHeader .menuMovileDiv .menuMovile {
+.menuMovileDiv .menuMovile {
   width: 100%;
   border-radius: 5px;
   background-color: #000289;
@@ -80,11 +65,14 @@
 
 .menuMovileDiv:active {
   transform: perspective(170px) rotateX(25deg);
-  box-shadow: 0px 0px 0px white;
+  box-shadow: 0px 0px 0px #ffffff;
 }
 
 #header {
+  background-color: white;
   font-size: 15px;
+  z-index: 9999;
+  box-shadow: unset 0 0 100px #000;
   background-size: 200%;
 }
 @media screen and (max-width: 1650px) {
@@ -113,55 +101,36 @@
   }
 }
 #header .imgdiv img {
-  box-shadow: inset 0 -3em 3em #000289, 0 0 0 2px #000289;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 1%;
 }
 #header .text-end {
   position: relative;
   left: 10%;
 }
-#header .text-end #divAnglia .card {
+#header .text-end .divAnglia .card {
   text-align: left;
   margin: 0px;
   width: auto;
   justify-content: space-evenly;
+  border: none;
 }
-#header .text-end #divAnglia .card h1 {
-  font-size: 1.4em;
+#header .text-end .divAnglia .card h1 {
+  font-size: 1.6em;
   color: #0082C0;
 }
-#header .text-end #divAnglia .card h2 {
-  font-size: 1em;
+#header .text-end .divAnglia .card h2 {
+  font-size: 1.2em;
   color: #0082C0;
 }
-#header .text-end #divAnglia .card h3 {
-  font-size: 1em;
+#header .text-end .divAnglia .card h3 {
+  font-size: 1.2em;
   color: #DA291C;
-}
-
-div .my-popover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #000289;
-  animation: growDown 300ms ease-in-out;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5333333333);
-}
-div .my-popover #buttonPopover {
-  background-color: #000289;
-  color: white;
-  font-weight: 800;
-  border-radius: 10px;
-  border: 5px solid rgba(255, 255, 255, 0);
-  font-family: "Exo", sans-serif;
-  font-size: 3em;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5333333333);
-  text-transform: capitalize;
 }
 
 #root {
   position: relative;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .activeSideBarRoot {
@@ -176,11 +145,11 @@ div .my-popover #buttonPopover {
   width: auto;
   height: 100%;
   z-index: 900;
-  overflow: hidden !important;
+  overflow-x: hidden !important;
   transform: translate3d(0, 0, 0);
 }
 #sideBar #sideBarDiv {
-  width: 200px;
+  width: auto;
   height: 100%;
 }
 #sideBar #sideBarDiv .exitButton {
@@ -270,14 +239,14 @@ div .my-popover #buttonPopover {
   #header header {
     padding: 0% 5px;
   }
-  #header .text-end #divAnglia .card h1 {
+  #header .text-end .divAnglia .card h1 {
+    font-size: 1.3em;
+  }
+  #header .text-end .divAnglia .card h2 {
     font-size: 1em;
   }
-  #header .text-end #divAnglia .card h2 {
-    font-size: 0.8em;
-  }
-  #header .text-end #divAnglia .card h3 {
-    font-size: 0.8em;
+  #header .text-end .divAnglia .card h3 {
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 767px) {
@@ -291,32 +260,31 @@ div .my-popover #buttonPopover {
   .text-end {
     display: block;
     position: fixed;
-    bottom: -0.5%;
+    bottom: -0.2%;
     z-index: 999;
-    right: 0px;
+    right: 0%;
     opacity: 90%;
   }
-  .text-end #divAnglia {
+  .text-end .divAnglia {
     flex-direction: row;
-    right: 0px;
   }
-  .text-end #divAnglia .card {
+  .text-end .divAnglia .card {
     position: relative;
     text-align: left;
     margin: 0px;
     width: auto;
     justify-content: space-evenly;
   }
-  .text-end #divAnglia .card h1 {
-    font-size: 1.2em;
+  .text-end .divAnglia .card h1 {
+    font-size: 2.2em;
     color: #0082C0;
   }
-  .text-end #divAnglia .card h2 {
-    font-size: 1em;
+  .text-end .divAnglia .card h2 {
+    font-size: 1.8em;
     color: #0082C0;
   }
-  .text-end #divAnglia .card h3 {
-    font-size: 1em;
+  .text-end .divAnglia .card h3 {
+    font-size: 1.8em;
     color: #DA291C;
   }
 }

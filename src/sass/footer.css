@@ -27,48 +27,24 @@ html {
   }
 }
 
-#box #container div div .Coae {
-  font-size: 2em;
-  color: white;
-  font-family: "Exo", sans-serif;
-  padding: auto;
-}
-#box #container div .imgAnglia {
-  width: 100px;
-}
-
-#imgFooterDiv {
+.footer .imgFooterDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 10px;
   background-color: white;
+  margin-bottom: 4%;
 }
-#imgFooterDiv #imgFooter {
-  width: 250px;
+.footer .imgFooterDiv .imgFooter {
   position: absolute;
 }
-
-#buttonLink {
-  font-size: 1em;
-  color: white;
-  font-family: "Exo", sans-serif;
-  border-radius: 2px;
-  border: solid 1px white;
+.footer .container .nav .nav-item .nav-link {
+  color: #000289;
 }
 
-@media screen and (max-width: 1024px) {
-  #box #container div div .Coae {
-    padding: 3% 0% 0% 1%;
-  }
-  #buttonLink {
-    font-size: 2em;
-  }
-}
-@media screen and (max-width: 300px) {
-  #buttonLink {
-    font-size: 1.5em;
-  }
+.direc {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  color: black;
 }/*# sourceMappingURL=footer.css.map */

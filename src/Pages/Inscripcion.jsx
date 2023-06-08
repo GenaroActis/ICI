@@ -46,8 +46,8 @@ const Inscripcion = () => {
                     <div className="form-group">
                         <label htmlFor="user_time">Preferencia de Cursado :</label>
                         <div className="wrapper">
-                            <input type="radio" name="select" id="option-1" value="mañana"/>
-                            <input type="radio" name="select" id="option-2" value="tarde"/>
+                            <input type="radio" name="select1" id="option-1" value="mañana"/>
+                            <input type="radio" name="select1" id="option-2" value="tarde"/>
                             <label htmlFor="option-1" className="option option-1">
                                 <div className="dot"></div>
                                 <span>Mañana</span>
@@ -55,6 +55,19 @@ const Inscripcion = () => {
                             <label htmlFor="option-2" className="option option-2">
                                 <div className="dot"></div>
                                 <span>Tarde</span>
+                            </label>
+                        </div>
+                        <label className='mt-4' htmlFor="user_time">Metodo de Pago :</label>
+                        <div className="wrapper">
+                            <input type="radio" name="select2" id="option-3" value="efectivo"/>
+                            <input type="radio" name="select2" id="option-4" value="transferencia"/>
+                            <label htmlFor="option-3" className="option option-3">
+                                <div className="dot"></div>
+                                <span>Efectivo</span>
+                                </label>
+                            <label htmlFor="option-4" className="option option-4">
+                                <div className="dot"></div>
+                                <span>Transferencia</span>
                             </label>
                         </div>
                     </div>

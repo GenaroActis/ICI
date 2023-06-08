@@ -1,11 +1,10 @@
-.header-img{
-    position: relative;
-    top: 20px;
-}
+
 .div-img-anglia{
     flex: 0 0 auto;
     width: 100%;
     height: auto;
+    display: flex;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     img{
         width: 100%;
     }
@@ -22,18 +21,7 @@
         font-size: 1.5em;
     }
 }
-#dropDownBtn{
-    color: white;
-    margin: 0px;
-    font-size: 1.5em;
-    line-height: 162%;
-    vertical-align: baseline;
-    background-color: #000289;
-    border-radius: 5px;
-    padding: .5rem!important;
-    box-shadow: 0px 6px 0px #000262;
-    transition: all .1s;
-}
+
 .div-nav-link:active {
     box-shadow: 0px 0px 0px white;
     position: relative;
@@ -50,36 +38,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10px;
-    .menuMovileDiv{
-        transform: perspective(200px) rotateX(15deg);
-        position: relative;
-        bottom: 5px;
-        .menuMovile{
-            width: 100%;
-            border-radius: 5px;
-            background-color: #000289;
-            font-size: 2.5em;
-            z-index: 999;
-            box-shadow: none;
-            border: none;
-            margin: 0;
-            cursor: pointer;
-            outline: none;
-            font-family: 'Exo', sans-serif;
-            font-weight: 900;
-        }
+    height: 4px;
+}
+.menuMovileDiv{
+    transform: perspective(200px) rotateX(15deg);
+    position: relative;
+    bottom: 5px;
+    .menuMovile{
+        width: 100%;
+        border-radius: 5px;
+        background-color: #000289;
+        font-size: 2.5em;
+        z-index: 999;
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Exo', sans-serif;
+        font-weight: 900;
     }
 }
-
 .menuMovileDiv:active {
     transform: perspective(170px) rotateX(25deg);
-    box-shadow: 0px 0px 0px white;
+    box-shadow: 0px 0px 0px #ffffff;
 }
 
 #header{
-    // background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
+    background-color: white;
     font-size: 15px;
+    z-index: 9999;
+    box-shadow: unset 0 0 100px #000;
     background-size: 200%;
     @media screen and (max-width:1650px){
         font-size: 14px;
@@ -98,31 +87,30 @@
     }
     .imgdiv{
         img{
-            box-shadow:
-            inset 0 -3em 3em #000289,
-                    0 0  0 2px #000289;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 1%;
         }
     }
     .text-end{
         position: relative;
         left: 10%;
-        #divAnglia{
+        .divAnglia{
             .card{
                 text-align: left;
                 margin: 0px;
                 width: auto;
                 justify-content: space-evenly;
+                border: none;
                 h1{
-                    font-size: 1.4em;
+                    font-size: 1.6em;
                     color: #0082C0;
                 }
                 h2{
-                    font-size: 1em;
+                    font-size: 1.2em;
                     color: #0082C0;
                 }
                 h3{
-                    font-size: 1em;
+                    font-size: 1.2em;
                     color: #DA291C;
                 }
             }
@@ -130,31 +118,9 @@
     }
 }
 
-div{
-    .my-popover{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #000289;
-        animation: growDown 300ms ease-in-out; 
-        box-shadow: inset 0 0 10px #00000088;
-        #buttonPopover{
-            background-color: #000289;
-            color: white;
-            font-weight: 800;
-            border-radius: 10px;
-            border: 5px solid rgba(255, 255, 255, 0);
-            font-family: 'Exo', sans-serif;
-            font-size: 3em;
-            box-shadow: inset 0 0 10px #00000088;
-            text-transform: capitalize;
-        }
-    }
-}
-
 #root{
     position: relative;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 // menu movil
 .activeSideBarRoot{
@@ -168,10 +134,10 @@ div{
     width: auto;
     height: 100%;
     z-index: 900;
-    overflow: hidden  !important;
+    overflow-x: hidden  !important;
     transform: translate3d(0, 0, 0);
     #sideBarDiv{
-        width: 200px;
+        width: auto;
         height: 100%;
         .exitButton{
             background: none;
@@ -202,10 +168,6 @@ div{
         }
     }
 }
-// .content{
-//     transform: translate3d(0, 0, 0);
-//     transition: transform 0.3s ease-out;
-// }
 .activeSideBar {
     transform: translate3d(200px, 0px, 0px)!important;
     overflow: hidden  !important; 
@@ -213,7 +175,6 @@ div{
 #index{
     overflow: hidden;
 }
-
 @keyframes growDown {
     0% {
         transform: scaleY(0)
@@ -274,16 +235,16 @@ div{
             padding: 0% 5px;
         }
         .text-end{
-            #divAnglia{
+            .divAnglia{
                 .card{
                     h1{
-                        font-size: 1em;
+                        font-size: 1.3em;
                     }
                     h2{
-                        font-size: 0.8em;
+                        font-size: 1em;
                     }
                     h3{
-                        font-size: 0.8em;
+                        font-size: 1em;
                     }
                 }
             }
@@ -305,19 +266,13 @@ div{
     .text-end{
         display: block;
         position: fixed;
-        bottom: -0.5%;
+        bottom: -0.2%;
         z-index: 999;
-        right: 0px;
+        left: null;
+        right: 0%;
         opacity: 90%;
-        #divAnglia{
+        .divAnglia{
             flex-direction: row;
-            // position:absolute;
-            right: 0px;
-            // .div-img-anglia{
-            //     img{
-                    
-            //     }
-            // }
             .card{
                 position: relative;
                 text-align: left;
@@ -325,15 +280,15 @@ div{
                 width: auto;
                 justify-content: space-evenly;
                 h1{
-                    font-size: 1.2em;
+                    font-size: 2.2em;
                     color: #0082C0;
                 }
                 h2{
-                    font-size: 1em;
+                    font-size: 1.8em;
                     color: #0082C0;
                 }
                 h3{
-                    font-size: 1em;
+                    font-size: 1.8em;
                     color: #DA291C;
                 }
             }

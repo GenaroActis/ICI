@@ -9,7 +9,6 @@ import Cursos from "./Pages/Cursos"
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import SideBar from "./Header/SideBar"
 import CartProvider from './Context/Context'
-
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./sass/button.css"
@@ -19,7 +18,7 @@ import "./sass/index.css"
 import "./sass/footer.css"
 import "./sass/Inscripcion.css"
 import "./sass/contacto.css"
-import "./sass/accordion.css"
+
 
 function App() {
   return (

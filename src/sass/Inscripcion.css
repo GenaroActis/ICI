@@ -32,7 +32,8 @@ html {
   align-items: center;
   justify-content: center;
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
-  background-size: 200% 100%;
+  background-size: cover;
+  background-color: #000289;
   font-family: "Exo", sans-serif;
   padding: 7rem 0rem;
 }
