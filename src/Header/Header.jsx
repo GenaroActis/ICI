@@ -18,7 +18,7 @@ const Header = () => {
                     <div className="col-4 col-sm-3 col-md-1 col-xxl-1 py-2">
                         <Link to={'/ici/contacto'} className="d-inline-flex link-body-emphasis text-decoration-none">
                             <div className='imgdiv' role="img" aria-label="Bootstrap">
-                                <img className='img-fluid mb-4 rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612599/ici/logoweb_bbapg5.png" alt="" />
+                                <img className='img-fluid rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612599/ici/logoweb_bbapg5.png" alt="" />
                             </div>
                         </Link>
                     </div>
@@ -56,7 +56,7 @@ const Header = () => {
             </div>
             <div onClick={() => sideBarOpen() }  className='borderHeader'>
                 <div className='div-nav-link d-flex d-md-none menuMovileDiv'>
-                    <button className='nav-link d-flex flex-row menuMovile p-4' >MENU
+                    <button type='button' className='nav-link d-flex flex-row menuMovile p-4' >MENU
                     <FontAwesomeIcon icon={faBars} className='ms-2' />
                     </button>
                 </div>

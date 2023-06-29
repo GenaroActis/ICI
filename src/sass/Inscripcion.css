@@ -26,6 +26,11 @@ html {
     font-size: 6px;
   }
 }
+@media screen and (max-width: 200px) {
+  html {
+    font-size: 5px;
+  }
+}
 
 #inputs {
   display: flex;

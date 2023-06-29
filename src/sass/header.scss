@@ -43,8 +43,10 @@
     transform: perspective(200px) rotateX(15deg);
     position: relative;
     bottom: 5px;
+    z-index: 999;
     .menuMovile{
         width: 100%;
+        user-select: none;
         border-radius: 5px;
         background-color: #000289;
         font-size: 2.5em;
@@ -65,12 +67,12 @@
 
 #header{
     background-color: white;
-    font-size: 15px;
+    font-size: 13px;
     z-index: 9999;
     box-shadow: unset 0 0 100px #000;
     background-size: 200%;
     @media screen and (max-width:1650px){
-        font-size: 14px;
+        font-size: 12px;
     }
     @media screen and (max-width:1324px){
         font-size: 13px;
@@ -92,7 +94,7 @@
     }
     .text-end{
         position: relative;
-        left: 10%;
+        left: 10vw;
         .divAnglia{
             .card{
                 text-align: left;
@@ -188,7 +190,7 @@
 @media screen and (max-width:1650px){
     #header{
         .text-end{
-            left: 8%;
+            left: 8vw;
         }
     }
 }
@@ -228,29 +230,50 @@
         top:10px;
     }
 }
-@media screen and (max-width: 840px){
+@media screen and (max-width: 992px){
     #header{
-        header{
-            padding: 0% 5px;
-        }
         .text-end{
+            left: -9vw;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.173);
             .divAnglia{
                 .card{
+                    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+                    display: block;
+                    position: fixed;
+                    bottom: -0.2%;
+                    z-index: 999;
+                    left: null;
+                    right: 0%;
+                    opacity: 95%;
+                    width: auto;
                     h1{
-                        font-size: 1.3em;
+                        font-size: 2.1em;
                     }
                     h2{
-                        font-size: 1em;
+                        font-size: 1.6em;
                     }
                     h3{
-                        font-size: 1em;
+                        font-size: 1.6em;
                     }
                 }
             }
         }
+        .imgdiv{
+            img{
+                position: relative;
+                left: 9vw;
+            }
+        }
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width: 840px){
+    #header{
+        header{
+            margin-bottom: 1% !important;
+        }
+    }
+}
+@media screen and (max-width:767px){
     #header{
         .text-end{
             position: relative;
@@ -259,6 +282,7 @@
         .imgdiv{
             img{
                 left: 0px;
+                margin-bottom: 18px;
             }
         }
     }
@@ -320,18 +344,18 @@
 }
 @media screen and (max-width:420px){
     .activeSideBar {
-        transform: translate3d(66vw, 0px, 0px)!important;
+        transform: translate3d(60vw, 0px, 0px)!important;
         overflow: hidden  !important; 
     }
     #sideBar{
         .sideBarDiv{
-            width: 66vw;
+            width: 60vw;
             .nav{
                 .div-nav-link{
                     margin-top: 20px !important;
                     margin-bottom: 20px !important;
                     .nav-link{
-                        font-size: 4em;
+                        font-size: 3em;
                     }
                 }
             }
@@ -351,7 +375,7 @@
                     margin-top: 15px !important;
                     margin-bottom: 15px !important;
                     .nav-link{
-                        font-size: 5em;
+                        font-size: 4em;
                     }
                 }
             }
