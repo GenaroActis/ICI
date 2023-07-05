@@ -18,6 +18,7 @@ import "./sass/index.css"
 import "./sass/footer.css"
 import "./sass/Inscripcion.css"
 import "./sass/contacto.css"
+import "./sass/Examenes.css"
 
 
 function App() {
