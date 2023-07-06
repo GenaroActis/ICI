@@ -274,7 +274,8 @@
 }
 @media screen and (max-width: 840px) {
   #header header {
-    margin-bottom: 1% !important;
+    padding-bottom: 0px !important;
+    margin-bottom: 8% !important;
   }
 }
 @media screen and (max-width: 767px) {

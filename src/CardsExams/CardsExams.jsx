@@ -12,14 +12,10 @@ const CardsExams = () => {
     const handleExpand1 = () => {
         setExpanded1(!expanded1);
     };
-    const [expanded2, setExpanded2] = useState(false);
-    const handleExpand2 = () => {
-        setExpanded2(!expanded2);
-    };
     return (
-        <div className='cardsExams'>
+        <div className='cardsExams container-fluid'>
             {/* CARD 0 */}
-            <Card className= {expanded0 ? 'expanded-card cardExams' : 'collapsed-card cardExams'}>
+            <Card className= {expanded0 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
                     <Card.Title><h3>Fechas de incripción y examen</h3></Card.Title>
                         <h5>INFORMACIÓN ADMINISTRATIVA - EXÁMENES EN PAPEL.</h5>
@@ -35,33 +31,18 @@ const CardsExams = () => {
             </Card>
 
             {/* CARD 1 */}
-            <Card className= {expanded1 ? 'expanded-card cardExams' : 'collapsed-card cardExams'}>
-                <Card.Body>
-                    <Card.Title><h3>Modelos de Examen & Teacher Handbook</h3></Card.Title>
-                        <h5>Trabajos de práctica y más.</h5>
-                </Card.Body>
-                {expanded1 && (
-                    <Card.Footer>
-                        
-                    </Card.Footer>
-                )}
-                <Button className="btn2" variant="primary" onClick={handleExpand1}>
-                    {expanded1 ? 'Leer menos' : 'Leer mas...'}
-                </Button>
-            </Card>
-
-            {/* CARD 2 */}
-            <Card className= {expanded2 ? 'expanded-card cardExams' : 'collapsed-card cardExams'}>
+            <Card className= {expanded1 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
                     <Card.Title><h3>Niveles de Examen</h3></Card.Title>
+                    <h5>TIPOS DE EXÁMENES.</h5>
                 </Card.Body>
-                {expanded2 && (
+                {expanded1 && (
                     <Card.Footer className="cardFooterLvls">
                         <ExamsLevels/>
                     </Card.Footer>
                 )}
-                <Button className="btn2" variant="primary" onClick={handleExpand2}>
-                    {expanded2 ? 'Leer menos' : 'Leer mas...'}
+                <Button className="btn2" variant="primary" onClick={handleExpand1}>
+                    {expanded1 ? 'Leer menos' : 'Leer mas...'}
                 </Button>
             </Card>
         </div>

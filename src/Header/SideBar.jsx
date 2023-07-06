@@ -15,7 +15,7 @@ const SideBar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-        }, []);
+    }, []);
         return (
             <>
             <div id='sideBar' className='d-flex d-md-none'>

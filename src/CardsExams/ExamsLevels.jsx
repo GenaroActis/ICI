@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Card, Button } from 'react-bootstrap';
+import IngGeneral from "./IngGeneral.jsx";
+import InglComercial from "./InglComercial.jsx";
+import InglJr from "./InglJr.jsx"
 
 function ExamsLevels() {
     const [expanded0, setExpanded0] = useState(false);
@@ -22,11 +25,12 @@ function ExamsLevels() {
                     <Card.Body>
                         <Card.Title><h3>INGLÉS GENERAL</h3></Card.Title>
                     </Card.Body>
-                    {expanded0 && (
-                        <Card.Footer>
-                        </Card.Footer>
-                    )}
                 </Button>
+                {expanded0 && (
+                    <Card.Footer>
+                        <IngGeneral/>
+                    </Card.Footer>
+                )}
             </Card>
 
             {/* CARD 1 */}
@@ -35,11 +39,12 @@ function ExamsLevels() {
                     <Card.Body>
                         <Card.Title><h3>INGLÉS COMERCIAL</h3></Card.Title>
                     </Card.Body>
-                    {expanded1 && (
-                        <Card.Footer>
-                        </Card.Footer>
-                    )}
                 </Button>
+                {expanded1 && (
+                    <Card.Footer>
+                        <InglComercial/>
+                    </Card.Footer>
+                )}
             </Card>
 
             {/* CARD 2 */}
@@ -48,11 +53,12 @@ function ExamsLevels() {
                     <Card.Body>
                         <Card.Title><h3>INGLÉS YOUNG STARS</h3></Card.Title>
                     </Card.Body>
-                    {expanded2 && (
-                        <Card.Footer>
-                        </Card.Footer>
-                    )}
                 </Button>
+                {expanded2 && (
+                    <Card.Footer>
+                        <InglJr/>
+                    </Card.Footer>
+                )}
             </Card>
         </div>
     )

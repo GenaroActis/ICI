@@ -16,11 +16,11 @@ const Header = () => {
                 </div>
                 <header className="d-flex align-items-center justify-content-sm-evenly justify-content-md-between justify-content-center mb-5 py-4 py-sm-3 mb-sm-4">
                     <div className="col-4 col-sm-3 col-md-1 col-xxl-1 py-2">
-                        <Link to={'/ici/contacto'} className="d-inline-flex link-body-emphasis text-decoration-none">
+                        <div className="d-inline-flex link-body-emphasis text-decoration-none">
                             <div className='imgdiv' role="img" aria-label="Bootstrap">
                                 <img className='img-fluid rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612599/ici/logoweb_bbapg5.png" alt="" />
                             </div>
-                        </Link>
+                        </div>
                     </div>
                     <ul id='buttonsHeader' className="nav d-none d-md-flex col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <div className='d-flex mt-2'>
@@ -54,9 +54,9 @@ const Header = () => {
                     </div>
                 </header>
             </div>
-            <div onClick={() => sideBarOpen() }  className='borderHeader'>
+            <div className='borderHeader'>
                 <div className='div-nav-link d-flex d-md-none menuMovileDiv'>
-                    <button type='button' className='nav-link d-flex flex-row menuMovile p-4' >MENU
+                    <button onClick={() => sideBarOpen() } type='button' className='nav-link d-flex flex-row menuMovile p-4' >MENU
                     <FontAwesomeIcon icon={faBars} className='ms-2' />
                     </button>
                 </div>

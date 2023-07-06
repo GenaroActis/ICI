@@ -28,6 +28,14 @@
     font-size: 10px;
   }
 }
+@media screen and (max-width: 407px) {
+  .exams {
+    font-size: 10px;
+  }
+}
+.exams .headExams {
+  margin-bottom: 10%;
+}
 .exams .headExams img {
   display: block;
 }
@@ -41,7 +49,6 @@
 .exams .cardsExams .cardExams {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: none;
-  margin: 5% 5%;
   text-align: center;
   display: flex;
   align-items: center;
@@ -53,6 +60,12 @@
   width: 25% !important;
   margin-bottom: 10px;
   font-size: 1.5em;
+}
+.exams .cardsExams .cardExams .card-body .card-title h3 {
+  font-size: 2.5em;
+}
+.exams .cardsExams .cardExams .card-body h5 {
+  font-size: 1.2em;
 }
 .exams .cardsExams .expanded-card {
   transition: box-shadow 0.3s ease-in-out;
@@ -74,4 +87,13 @@
 .exams .cardsExamsLevels .cardExamsLevels .btnLvls .card-body .card-title h3 {
   text-transform: 10px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 407px) {
+  .card {
+    width: auto;
+  }
+  .exams .cardsExams .cardExams .btn {
+    width: auto !important;
+  }
 }/*# sourceMappingURL=Examenes.css.map */
