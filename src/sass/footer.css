@@ -8,7 +8,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -34,10 +34,13 @@ html {
   align-items: center;
   position: relative;
   background-color: white;
-  margin-bottom: 6%;
 }
 .footer .imgFooterDiv .imgFooter {
+  margin-bottom: 100px;
   position: absolute;
+}
+.footer .footer-info {
+  font-size: 1em;
 }
 .footer .container .nav .nav-item .nav-link {
   color: #000289;
