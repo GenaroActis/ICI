@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../sass/inputs.css"
 
 const Inscripcion = () => {
+    const [transferencia, setTransferencia] = useState(null);
+
+    const handleChangeTransferencia = (e) =>{
+        if (e.target.value === 'transferencia') {
+            setTransferencia(true);
+        } else {
+            setTransferencia(false);
+        }
+    };
+
     return (
         <>
         <div id='inputs'>
@@ -59,8 +69,8 @@ const Inscripcion = () => {
                         </div>
                         <label className='mt-4' htmlFor="user_time">Metodo de Pago :</label>
                         <div className="wrapper">
-                            <input type="radio" name="select2" id="option-3" value="efectivo"/>
-                            <input type="radio" name="select2" id="option-4" value="transferencia"/>
+                            <input type="radio" name="select2" id="option-3" value="efectivo" onChange={handleChangeTransferencia}/>
+                            <input type="radio" name="select2" id="option-4" value="transferencia" onChange={handleChangeTransferencia}/>
                             <label htmlFor="option-3" className="option option-3">
                                 <div className="dot"></div>
                                 <span>Efectivo</span>
@@ -70,6 +80,15 @@ const Inscripcion = () => {
                                 <span>Transferencia</span>
                             </label>
                         </div>
+                        {
+                            transferencia && (
+                                <div className="transferencia mt-4">
+                                    <h1>CBU: 123456789123456789</h1>
+                                    <h3>Adjuntar Comprobante</h3>
+                                    <input className="form-control" type="file"/>
+                                </div>
+                            ) 
+                        }
                     </div>
                         <input type="submit" className="btn2" value="Inscribirse"/>
                     </form>

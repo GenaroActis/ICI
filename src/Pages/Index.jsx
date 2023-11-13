@@ -1,6 +1,6 @@
 import React from 'react'
 import Accordion from '../Accordion/Accordion'
-import CarouselIndex from '../Carousel/Carousel'
+import CarouselIndex from '../Carousel/CarouselIndex'
 
 const Index = () => {
     return (

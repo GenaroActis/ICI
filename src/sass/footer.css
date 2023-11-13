@@ -27,13 +27,17 @@ html {
   }
 }
 
+.footer {
+  background-color: #ffffff;
+  background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 20px 20px, linear-gradient(rgba(0, 2, 137, 0.4078431373) 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, rgba(0, 2, 137, 0.4078431373) 1.6px, #ffffff 1.6px) -0.8px 0;
+  background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
 .footer .imgFooterDiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: white;
 }
 .footer .imgFooterDiv .imgFooter {
   margin-bottom: 100px;
@@ -41,6 +45,15 @@ html {
 }
 .footer .footer-info {
   font-size: 1em;
+}
+.footer .footer-info div {
+  background-color: #ffffff;
+}
+.footer .footer-info a {
+  background-color: #ffffff;
+}
+.footer .container .nav .nav-item {
+  background-color: #ffffff;
 }
 .footer .container .nav .nav-item .nav-link {
   color: #000289;

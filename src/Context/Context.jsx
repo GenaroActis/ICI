@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
-
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 export const Context = createContext();
 const ContextProvider = ({children}) => {
@@ -35,6 +36,7 @@ const sideBarOpen = () => {
     }
 }
 
+
 ////////.////////
 
     return(
@@ -43,5 +45,29 @@ const sideBarOpen = () => {
         </Context.Provider>
     )
 }
+
+export const generateNotifySuccess = (msg) => toast.success(msg, {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: 0,
+    content : 0,
+    theme: "colored",
+});
+
+export const generateNotifyError = (msg) => toast.error(msg, {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: 0,
+    content : 0,
+    theme: "colored",
+});
 
 export default ContextProvider

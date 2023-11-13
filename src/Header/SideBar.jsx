@@ -41,7 +41,7 @@ const SideBar = () => {
                 : null}
             </div>
             
-            <div className={`fade ${showCard ? '' : 'hide'}`}>
+            {/* <div className={`fade ${showCard ? '' : 'hide'}`}>
                 <div className="d-block d-md-none col-3 text-end">
                     <div className='divAnglia d-flex flex-row-reverse'>
                             <div className='div-img-anglia'>
@@ -60,7 +60,7 @@ const SideBar = () => {
                             </div>
                         </div>
                 </div>
-            </div>
+            </div> */}
             </>
         )
     }
