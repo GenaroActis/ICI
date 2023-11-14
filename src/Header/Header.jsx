@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {Context} from "../Context/Context";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +7,19 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 const Header = () => {
     let {sideBarOpen} = useContext(Context)
-    
+    const [showCard, setShowCard] = useState(true);
+    useEffect(() => {
+        if (window.innerWidth < 992){
+            const handleScroll = () => {
+                const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+                setShowCard(!isBottom);
+                };
+                window.addEventListener('scroll', handleScroll);
+                return () => {
+                    window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, []);
     return (
         <>
         <div id='header'>
@@ -38,24 +50,6 @@ const Header = () => {
                             </Dropdown.Menu>
                         </Dropdown>
                     </ul>
-                    {/* <div className="d-none d-md-block col-2 col-sm-1 col-md-1 col-xxl-1 text-end">
-                        <div className='divAnglia d-flex flex-row-reverse flex-sm-row flex-md-row-reverse'>
-                            <div className='div-img-anglia'>
-                                <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679514874/ici/Anglia_Logo_2015_No_background_1_2_tlnnnf.png" alt="" />
-                            </div>
-                            <div className='card p-1 col-11'>
-                                    <h1>
-                                    I.C.I. PATRICIA ALEMIS
-                                    </h1>
-                                    <h2>
-                                    Centro Oficial Anglia Exams
-                                    </h2>
-                                    <h3>
-                                    Exámenes Internacionales
-                                    </h3>
-                            </div>
-                        </div>
-                    </div> */}
                 </header>
             <div className='borderHeader'>
                 <div className='div-nav-link d-flex d-md-none menuMovileDiv'>
@@ -64,6 +58,28 @@ const Header = () => {
                     </button>
                 </div>
             </div>
+            <a href="https://www.anglia.org/">
+                <div className={`fade ${showCard ? '' : 'hide'}`}>
+                    <div className="d-fixed text-end">
+                        <div className='divAnglia d-flex flex-row-reverse'>
+                            <div className='div-img-anglia'>
+                                <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679514874/ici/Anglia_Logo_2015_No_background_1_2_tlnnnf.png" alt="" />
+                            </div>
+                            <div className='card p-1 col-11'>
+                                <h1>
+                                I.C.I. PATRICIA ALEMIS
+                                </h1>
+                                <h2>
+                                Centro Oficial Anglia Exams
+                                </h2>
+                                <h3>
+                                Exámenes Internacionales
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
         </>
     )

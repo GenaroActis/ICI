@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <>
         <div className='d-flex pt-5 flex-column align-items-center footer'>
-            <div className='col-5 col-sm-4 col-md-4 col-lg-4 col-xl-3 col-xxl-2 imgFooterDiv'>
+            <div className='col-5 col-sm-4 col-md-4 col-lg-3 col-xxl-2 imgFooterDiv'>
                 <img src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679510940/ici/logoicipng_zbsdom.png" className='img-fluid imgFooter' alt="" />
             </div>
             <div className="footer-info d-flex flex-column text-center align-items-center mt-5">

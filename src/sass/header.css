@@ -36,43 +36,50 @@
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.604);
   border-radius: 1%;
 }
-#header .text-end {
-  position: relative;
-  left: 10vw;
+#header .fade .text-end {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  z-index: 9999;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.466);
+  width: 6%;
 }
-#header .text-end .divAnglia .card {
-  text-align: left;
-  margin: 0px;
-  width: auto;
-  justify-content: space-evenly;
-  border: none;
-}
-#header .text-end .divAnglia .card h1 {
-  font-size: 1.6em;
-  color: #0082C0;
-}
-#header .text-end .divAnglia .card h2 {
-  font-size: 1.2em;
-  color: #0082C0;
-}
-#header .text-end .divAnglia .card h3 {
-  font-size: 1.2em;
-  color: #DA291C;
-}
-
-.btn:hover {
-  background-color: #000289;
-}
-
-.div-img-anglia {
+#header .fade .text-end .divAnglia .div-img-anglia {
   flex: 0 0 auto;
   width: 100%;
   height: auto;
   display: flex;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
-.div-img-anglia img {
+#header .fade .text-end .divAnglia .div-img-anglia img {
   width: 100%;
+}
+#header .fade .text-end .divAnglia .card {
+  text-align: left;
+  margin: 0px;
+  width: auto;
+  justify-content: space-evenly;
+  border: none;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.466);
+}
+#header .fade .text-end .divAnglia .card h1 {
+  font-size: 2em;
+  color: #0082C0;
+  font-weight: 700;
+}
+#header .fade .text-end .divAnglia .card h2 {
+  font-size: 1.5em;
+  color: #0082C0;
+  font-weight: 600;
+}
+#header .fade .text-end .divAnglia .card h3 {
+  font-size: 1.5em;
+  color: #DA291C;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #000289;
 }
 
 .div-nav-link {
@@ -220,11 +227,19 @@
 }
 
 .hide {
-  transition: opacity 3s ease-out;
+  transition: opacity 5s ease-in-out;
   visibility: hidden;
 }
 
+@media screen and (max-width: 1400px) {
+  #header .fade .text-end {
+    width: 8%;
+  }
+}
 @media screen and (max-width: 1266px) {
+  #header .fade .text-end {
+    width: 10%;
+  }
   #header .imgdiv img {
     width: 100%;
   }
@@ -237,43 +252,28 @@
   display: none;
 }
 
+@media screen and (max-width: 992px) {
+  #header .fade .text-end {
+    width: 12%;
+  }
+}
 @media screen and (max-width: 767px) {
+  #header .fade .text-end {
+    width: 15%;
+  }
   #header .borderHeader {
     margin-top: 10%;
   }
-  .text-end {
-    display: block;
-    position: fixed;
-    bottom: -0.2%;
-    z-index: 999;
-    right: 0%;
-    opacity: 90%;
-    width: 15%;
-  }
-  .text-end .divAnglia {
-    flex-direction: row;
-  }
-  .text-end .divAnglia .card {
-    position: relative;
-    text-align: left;
-    margin: 0px;
-    width: auto;
-    justify-content: space-evenly;
-  }
-  .text-end .divAnglia .card h1 {
-    font-size: 1.8em;
-    color: #0082C0;
-  }
-  .text-end .divAnglia .card h2 {
-    font-size: 1.4em;
-    color: #0082C0;
-  }
-  .text-end .divAnglia .card h3 {
-    font-size: 1.4em;
-    color: #DA291C;
+}
+@media screen and (max-width: 580px) {
+  #header .fade .text-end {
+    width: 19%;
   }
 }
 @media screen and (max-width: 420px) {
+  #header .fade .text-end {
+    width: 22%;
+  }
   .activeSideBar {
     transform: translate3d(75vw, 0px, 0px) !important;
     overflow: hidden !important;
@@ -290,6 +290,12 @@
   }
 }
 @media screen and (max-width: 320px) {
+  #header .fade .text-end {
+    width: 25%;
+  }
+  #header .borderHeader {
+    margin-top: 13%;
+  }
   .activeSideBar {
     transform: translate3d(80vw, 0px, 0px) !important;
     overflow: hidden !important;

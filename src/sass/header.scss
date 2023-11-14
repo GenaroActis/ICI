@@ -27,27 +27,47 @@
             border-radius: 1%;
         }
     }
-    .text-end{
-        position: relative;
-        left: 10vw;
-        .divAnglia{
-            .card{
-                text-align: left;
-                margin: 0px;
-                width: auto;
-                justify-content: space-evenly;
-                border: none;
-                h1{
-                    font-size: 1.6em;
-                    color: #0082C0;
+    .fade{
+        .text-end{
+            position: fixed;
+            right: 0%;
+            bottom: 0%;
+            z-index: 9999;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.466);
+            width: 6%;
+            .divAnglia{
+                .div-img-anglia{
+                    flex: 0 0 auto;
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+                    img{
+                        width: 100%;
+                    }
                 }
-                h2{
-                    font-size: 1.2em;
-                    color: #0082C0;
-                }
-                h3{
-                    font-size: 1.2em;
-                    color: #DA291C;
+                .card{
+                    text-align: left;
+                    margin: 0px;
+                    width: auto;
+                    justify-content: space-evenly;
+                    border: none;
+                    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.466);
+                    h1{
+                        font-size: 2em;
+                        color: #0082C0;
+                        font-weight: 700;
+                    }
+                    h2{
+                        font-size: 1.5em;
+                        color: #0082C0;
+                        font-weight: 600;
+                    }
+                    h3{
+                        font-size: 1.5em;
+                        color: #DA291C;
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -56,16 +76,7 @@
 .btn:hover{
     background-color: #000289;
 }
-.div-img-anglia{
-    flex: 0 0 auto;
-    width: 100%;
-    height: auto;
-    display: flex;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    img{
-        width: 100%;
-    }
-}
+
 .div-nav-link{
     background-color: #000289 !important;
     border-radius: 5px;
@@ -203,17 +214,19 @@
     opacity: 1 !important;
 }
 .hide {
-    transition: opacity 3s ease-out;
+    transition: opacity 5s ease-in-out;
     visibility: hidden;
 }
 
-// @media screen and (max-width:1650px){
-//     #header{
-//         .text-end{
-//             left: 8vw;
-//         }
-//     }
-// }
+@media screen and (max-width:1400px){
+    #header{
+        .fade{
+            .text-end{
+                width: 8%;
+            }
+        }
+    }
+}
 // @media screen and (max-width: 1550px){
 // #buttonsHeader{
 //     flex-direction: column;
@@ -227,9 +240,11 @@
 // }
 @media screen and (max-width: 1266px){
     #header{
-        // .text-end{
-        //     left: 0px;
-        // }
+        .fade{
+            .text-end{
+                width: 10%;
+            }
+        }
         // .container{
         //     max-width: 100%;
         //     --bs-gutter-x: 0rem;
@@ -244,11 +259,6 @@
         }
     }
 }
-// @media screen and (max-width: 1070px){
-//     .header-img {
-//         top:10px;
-//     }
-// }
 .btn{
     width: auto;
 }
@@ -256,116 +266,43 @@
     display: none;
 }
 @media screen and (max-width: 992px){
-    // #header{
-    //     .text-end{
-    //         left: -9vw;
-    //         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.173);
-    //         .divAnglia{
-    //             .card{
-    //                 box-shadow: 2px 2px 8px rgb(0, 0, 0);
-    //                 display: block;
-    //                 position: fixed;
-    //                 bottom: -0.2%;
-    //                 z-index: 999;
-    //                 left: null;
-    //                 right: 0%;
-    //                 opacity: 95%;
-    //                 width: auto;
-    //                 h1{
-    //                     font-size: 2.1em;
-    //                 }
-    //                 h2{
-    //                     font-size: 1.6em;
-    //                 }
-    //                 h3{
-    //                     font-size: 1.6em;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     .imgdiv{
-    //         img{
-    //             position: relative;
-    //             left: 9vw;
-    //         }
-    //     }
-    // }
-}
-@media screen and (max-width:767px){
-    // #header{
-    //     .text-end{
-    //         position: relative;
-    //         left: 0%;
-    //     }
-    //     .imgdiv{
-    //         img{
-    //             left: 0px;
-    //             margin-bottom: 18px;
-    //         }
-    //     }
-    // }
     #header{
-        .borderHeader{
-            margin-top: 10%;
-        }
-    }
-    .text-end{
-        display: block;
-        position: fixed;
-        bottom: -0.2%;
-        z-index: 999;
-        left: null;
-        right: 0%;
-        opacity: 90%;
-        width: 15%;
-        .divAnglia{
-            flex-direction: row;
-            .card{
-                position: relative;
-                text-align: left;
-                margin: 0px;
-                width: auto;
-                justify-content: space-evenly;
-                h1{
-                    font-size: 1.8em;
-                    color: #0082C0;
-                }
-                h2{
-                    font-size: 1.4em;
-                    color: #0082C0;
-                }
-                h3{
-                    font-size: 1.4em;
-                    color: #DA291C;
-                }
+        .fade{
+            .text-end{
+                width: 12%;
             }
         }
     }
 }
-// @media screen and (max-width:580px){
-//     .text-end{
-//         display: block;
-//         position: fixed;
-//         bottom: 0%;
-//         z-index: 999;
-//         opacity: 95%;
-//         width: 20%;
-//         .divAnglia{
-//             .card{
-//                 h1{
-//                     font-size: 2.5em;
-//                 }
-//                 h2{
-//                     font-size: 2em;
-//                 }
-//                 h3{
-//                     font-size: 2em;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media screen and (max-width:767px){
+    #header{
+        .fade{
+            .text-end{
+                width: 15%;
+            }
+        }
+        .borderHeader{
+            margin-top: 10%;
+        }
+    }
+}
+@media screen and (max-width:580px){
+    #header{
+        .fade{
+            .text-end{
+                width: 19%;
+            }
+        }
+    }
+}
 @media screen and (max-width:420px){
+    #header{
+        .fade{
+            .text-end{
+                width: 22%;
+            }
+        }
+    }
     .activeSideBar {
         transform: translate3d(75vw, 0px, 0px)!important;
         overflow: hidden  !important; 
@@ -386,6 +323,16 @@
     }
 }
 @media screen and (max-width:320px){
+    #header{
+        .fade{
+            .text-end{
+                width: 25%;
+            }
+        }
+        .borderHeader{
+            margin-top: 13%;
+        }
+    }
     .activeSideBar {
         transform: translate3d(80vw, 0px, 0px)!important;
         overflow: hidden  !important; 

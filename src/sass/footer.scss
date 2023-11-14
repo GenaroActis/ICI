@@ -27,7 +27,7 @@ html{
         align-items: center;
         position: relative;
         .imgFooter {
-            margin-bottom: 100px;
+            margin-bottom: 25%;
             position: absolute;
         }
     }
@@ -56,6 +56,18 @@ html{
     color: black;
 }
 
+@media screen and (max-width:1024px){
+    .footer{
+        .imgFooterDiv{
+            .imgFooter{
+                margin-bottom: 27%;
+            }
+        }
+        .footer-info{
+            margin-top: 8% !important;
+        }
+    }
+}
 
 
 
