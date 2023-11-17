@@ -9,16 +9,14 @@ const Header = () => {
     let {sideBarOpen} = useContext(Context)
     const [showCard, setShowCard] = useState(true);
     useEffect(() => {
-        if (window.innerWidth < 992){
-            const handleScroll = () => {
-                const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
-                setShowCard(!isBottom);
-                };
-                window.addEventListener('scroll', handleScroll);
-                return () => {
-                    window.removeEventListener('scroll', handleScroll);
+        const handleScroll = () => {
+            const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+            setShowCard(!isBottom);
             };
-        }
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
     return (
         <>

@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 407px) {
-  .card {
+  .examsCard {
     width: auto;
   }
   .exams .cardsExams .cardExams .btn {

@@ -20,7 +20,7 @@ const Footer = () => {
                 <img src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679510940/ici/logoicipng_zbsdom.png" className='img-fluid imgFooter' alt="" />
             </div>
             <div className="footer-info d-flex flex-column text-center align-items-center mt-5">
-                <div className='col-8 col-sm-6 col-lg-4 col-xxl-3 mt-5'>
+                <div className='col-8 col-sm-6 col-lg-4 col-xxl-4 mt-5'>
                     <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1680612964/ici/insti_v0n4zi.png" alt="" />
                 </div>
                 <Link onClick={upMap} to={'/ici/contacto'}>

@@ -1,36 +1,43 @@
-html {
-  font-size: 18px;
-}
-@media screen and (max-width: 1324px) {
-  html {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 580px) {
-  html {
-    font-size: 8px;
-  }
-}
-@media screen and (max-width: 420px) {
-  html {
-    font-size: 6px;
-  }
-}
-
 .footer {
+  font-size: 22px;
   background-color: #ffffff;
   background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 20px 20px, linear-gradient(rgba(0, 2, 137, 0.4078431373) 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, rgba(0, 2, 137, 0.4078431373) 1.6px, #ffffff 1.6px) -0.8px 0;
   background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
+@media screen and (max-width: 2200px) {
+  .footer {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .footer {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .footer {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    font-size: 10px;
+  }
 }
 .footer .imgFooterDiv {
   display: flex;
@@ -38,6 +45,7 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 1%;
 }
 .footer .imgFooterDiv .imgFooter {
   margin-bottom: 25%;
@@ -57,19 +65,23 @@ html {
 }
 .footer .container .nav .nav-item .nav-link {
   color: #000289;
+  font-size: 1.8em;
 }
 
 .direc {
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
   color: black;
+  font-size: 1.5em;
 }
 
-@media screen and (max-width: 1024px) {
-  .footer .imgFooterDiv .imgFooter {
-    margin-bottom: 27%;
+@media screen and (max-width: 1600px) {
+  .footer .imgFooterDiv {
+    margin-bottom: 0.5%;
   }
-  .footer .footer-info {
-    margin-top: 8% !important;
+}
+@media screen and (max-width: 1024px) {
+  .footer .imgFooterDiv {
+    margin-bottom: 0%;
   }
 }/*# sourceMappingURL=footer.css.map */

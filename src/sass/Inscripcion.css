@@ -85,7 +85,7 @@ html {
     padding: 100px 0px;
   }
 }
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 580px) {
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -94,9 +94,18 @@ html {
   .wrapper .option {
     padding: 2.5% 0%;
   }
+  .transferencia h1 {
+    font-size: 20px;
+  }
+  .transferencia h3 {
+    font-size: 20px;
+  }
+  .transferencia .form-control {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 407px) {
   .card {
-    width: 97vw;
+    width: 100vw;
   }
 }/*# sourceMappingURL=Inscripcion.css.map */

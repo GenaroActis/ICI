@@ -4,25 +4,104 @@
   background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
   background-size: cover;
   align-items: center;
+  font-size: 22px;
+}
+@media screen and (max-width: 2200px) {
+  #index {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1800px) {
+  #index {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #index {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #index {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #index {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #index {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #index {
+    font-size: 10px;
+  }
 }
 
 .paddingFooter {
   padding-bottom: 10%;
 }
 
+.carouselIndex {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.carouselCaption {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.carouselCaption h3 {
+  font-size: 2.5em !important;
+}
+.carouselCaption p {
+  font-size: 1.8em;
+}
+
+@media screen and (max-width: 992px) {
+  .carouselIndex {
+    width: 150%;
+  }
+}
 @media screen and (max-width: 768px) {
-  .carouselCaption p {
-    font-size: 1.1em;
+  .carouselIndex {
+    width: 160%;
   }
   .paddingFooter {
     padding-bottom: 14%;
   }
 }
 @media screen and (max-width: 576px) {
+  .carouselIndex {
+    width: 180%;
+  }
+  .carouselCaption {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
   .carouselCaption h3 {
-    font-size: 2em;
+    font-size: 2em !important;
   }
   .carouselCaption p {
     font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 300px) {
+  .carouselCaption {
+    margin-left: 7%;
+    margin-right: 7%;
+    overflow: hidden;
+  }
+  .carouselCaption h3 {
+    font-size: 1.8em !important;
+  }
+  .carouselCaption p {
+    font-size: 1.4em;
   }
 }/*# sourceMappingURL=index.css.map */

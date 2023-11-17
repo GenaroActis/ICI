@@ -8,7 +8,7 @@ const Index = () => {
         <div id='index' className='paddingFooter'>
             <CarouselIndex/>
             <Accordion/>
-            <div className='col-14 col-sm-10 col-md-9 col-lg-6 col-xl-5 col-xxl-4'>
+            <div className='col-14 col-sm-10 col-md-9 col-lg-6 col-xl-4 col-xxl-3'>
                 <img className='img-fluid' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679515669/ici/flyer_eyqil6.png" alt="" />
             </div>
         </div>
