@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars, faPenToSquare, faHouse, faAddressCard, faPlane, faFileSignature, faGraduationCap, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 import Dropdown from 'react-bootstrap/Dropdown';
 
-const Header = () => {
+const HeaderLog = () => {
     let {sideBarOpen} = useContext(Context)
     const [showCard, setShowCard] = useState(true);
     useEffect(() => {
@@ -24,37 +24,13 @@ const Header = () => {
                 <header className="d-flex p-4 justify-content-around py-2 py-sm-1">
                     <div className="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 py-2">
                         <div className="d-inline-flex link-body-emphasis text-decoration-none">
-                            <div className='imgdiv' role="img">
+                            <div className='imgdiv d-flex justify-content-center' role="img">
                                 <img className='rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1697556868/ici/logo_ICI_2322_sfamnp.png" alt="" />
                             </div>
                         </div>
                     </div>
-                    <ul id='buttonsHeader' className="nav d-none d-md-flex col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <div className='d-flex align-items-center'>
-                            <li className='div-nav-link  d-md-block d-none m-1'><Link to={'/ici'} className="nav-link px-1 py-3 d-flex">INICIO<FontAwesomeIcon icon={faHouse} className='ms-1' /></Link></li>
-                            <li className='div-nav-link d-md-block d-none m-1'><Link to={'/ici/inscripcion'} className="nav-link d-flex px-1 py-3">INSCRIPCION<FontAwesomeIcon icon={faPenToSquare} className='ms-1'/></Link></li>
-                            <li className='div-nav-link d-md-block d-none m-1'><Link to={'/ici/contacto'} className="nav-link d-flex px-1 py-3">CONTACTO<FontAwesomeIcon icon={faAddressCard} className='ms-1'/></Link></li>
-                        </div>
-                        <Dropdown drop='down-centered' className='d-flex align-items-center'>
-                            <Dropdown.Toggle className='div-nav-link d-md-block d-none p-0 m-1'>
-                                <div className='nav-link d-flex px-1 py-3'>
-                                SERVICIOS <FontAwesomeIcon icon={faCaretDown} />
-                                </div>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu className='menuContainer'>
-                                <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/viajes">VIAJES<FontAwesomeIcon icon={faPlane} className='ms-1'/></Dropdown.Item>
-                                <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/examenes">EXAMENES<FontAwesomeIcon icon={faFileSignature} className='ms-1'/></Dropdown.Item>
-                                <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/cursos"> CURSOS<FontAwesomeIcon icon={faGraduationCap} className='ms-1'/></Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-                    </ul>
                 </header>
             <div className='borderHeader'>
-                <div className='div-nav-link d-flex d-md-none menuMovileDiv'>
-                    <button onClick={() => sideBarOpen() } type='button' className='nav-link d-flex flex-row menuMovile p-4' >MENU
-                    <FontAwesomeIcon icon={faBars} className='ms-2' />
-                    </button>
-                </div>
             </div>
             <a href="https://www.anglia.org/">
                 <div className={`fadeHeader ${showCard ? '' : 'hide'}`}>
@@ -83,4 +59,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default HeaderLog

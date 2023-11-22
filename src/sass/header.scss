@@ -33,7 +33,7 @@
             border-radius: 1%;
         }
     }
-    .fade{
+    .fadeHeader{
         .text-end{
             position: fixed;
             right: 0%;
@@ -94,7 +94,6 @@
     border-color: #000289 !important;
     .nav-link{
         color: white;
-        
     }
 }
 
@@ -216,7 +215,7 @@
     100% { opacity: 1; }
 }
 
-.fade {
+.fadeHeader {
     opacity: 1 !important;
 }
 .hide {
@@ -226,27 +225,17 @@
 
 @media screen and (max-width:1400px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 8%;
             }
         }
     }
 }
-// @media screen and (max-width: 1550px){
-// #buttonsHeader{
-//     flex-direction: column;
-//     align-items: center;
-// }
-// #header{
-//     .text-end{
-//         left: 3%;
-//     }
-// }
-// }
+
 @media screen and (max-width: 1266px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 10%;
             }
@@ -273,7 +262,7 @@
 }
 @media screen and (max-width: 992px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 12%;
             }
@@ -282,7 +271,7 @@
 }
 @media screen and (max-width:767px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 15%;
             }
@@ -294,7 +283,7 @@
 }
 @media screen and (max-width:580px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 19%;
             }
@@ -303,7 +292,7 @@
 }
 @media screen and (max-width:420px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 22%;
             }
@@ -330,7 +319,7 @@
 }
 @media screen and (max-width:320px){
     #header{
-        .fade{
+        .fadeHeader{
             .text-end{
                 width: 25%;
             }

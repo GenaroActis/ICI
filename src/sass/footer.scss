@@ -1,6 +1,9 @@
 
 .footer {
-    font-size:22px;
+    font-size:27px;
+    @media screen and (max-width:3200px){
+        font-size: 22px;
+    }
     @media screen and (max-width:2200px){
         font-size: 18px;
     }
@@ -31,9 +34,9 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        margin-bottom: 1%;
+        margin-bottom: 5%;
         .imgFooter {
-            margin-bottom: 25%;
+            margin-bottom: 0%;
             position: absolute;
         }
     }
@@ -63,12 +66,22 @@
     color: black;
     font-size: 1.5em;
 }
+.text-body-secondary{
+    font-size: 1.5em;
+}
 
+@media screen and (max-width: 2500px){
+    .footer {
+        .imgFooterDiv{
+            margin-bottom: 4%;
+        }
+    }
+}
 
 @media screen and (max-width: 1600px){
     .footer {
         .imgFooterDiv{
-            margin-bottom: 0.5%;
+            margin-bottom: 2%;
         }
     }
 }
@@ -76,7 +89,7 @@
 @media screen and (max-width:1024px){
     .footer{
         .imgFooterDiv{
-            margin-bottom: 0%;
+            margin-bottom: 5%;
         }
     }
 }

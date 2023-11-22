@@ -1,8 +1,13 @@
 .footer {
-  font-size: 22px;
+  font-size: 27px;
   background-color: #ffffff;
   background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 20px 20px, linear-gradient(rgba(0, 2, 137, 0.4078431373) 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, rgba(0, 2, 137, 0.4078431373) 1.6px, #ffffff 1.6px) -0.8px 0;
   background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
+@media screen and (max-width: 3200px) {
+  .footer {
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 2200px) {
   .footer {
@@ -45,10 +50,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 1%;
+  margin-bottom: 5%;
 }
 .footer .imgFooterDiv .imgFooter {
-  margin-bottom: 25%;
+  margin-bottom: 0%;
   position: absolute;
 }
 .footer .footer-info {
@@ -75,13 +80,22 @@
   font-size: 1.5em;
 }
 
+.text-body-secondary {
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 2500px) {
+  .footer .imgFooterDiv {
+    margin-bottom: 4%;
+  }
+}
 @media screen and (max-width: 1600px) {
   .footer .imgFooterDiv {
-    margin-bottom: 0.5%;
+    margin-bottom: 2%;
   }
 }
 @media screen and (max-width: 1024px) {
   .footer .imgFooterDiv {
-    margin-bottom: 0%;
+    margin-bottom: 5%;
   }
 }/*# sourceMappingURL=footer.css.map */

@@ -25,7 +25,8 @@
 .form-group input[type="tel"],
 .form-group input[type="date"],
 .form-group input[type="text"],
-.form-group input[type="email"] {
+.form-group input[type="email"],
+.form-group input[type="number"] {
     width: 100%;
     font-size: 36px;
     border: 1px solid #ccc;
@@ -154,7 +155,8 @@ input[type="radio"] {
     .form-group input[type="tel"],
     .form-group input[type="date"],
     .form-group input[type="text"],
-    .form-group input[type="email"]{
+    .form-group input[type="email"],
+    .form-group input[type="number"]{
         font-size: 20px;
     }
     .wrapper .option span{
@@ -171,7 +173,8 @@ input[type="radio"] {
     .form-group input[type="tel"],
     .form-group input[type="date"],
     .form-group input[type="text"],
-    .form-group input[type="email"]{
+    .form-group input[type="email"],
+    .form-group input[type="number"]{
         font-size: 25px;
     }
     .wrapper .option span{
@@ -188,7 +191,8 @@ input[type="radio"] {
     .form-group input[type="tel"],
     .form-group input[type="date"],
     .form-group input[type="text"],
-    .form-group input[type="email"]{
+    .form-group input[type="email"],
+    .form-group input[type="number"]{
         font-size: 20px;
     }
     .wrapper .option span{
@@ -208,7 +212,8 @@ input[type="radio"] {
     .form-group input[type="tel"],
     .form-group input[type="date"],
     .form-group input[type="text"],
-    .form-group input[type="email"]{
+    .form-group input[type="email"],
+    .form-group input[type="number"]{
         font-size: 15px;
     }
     .wrapper .option span{
