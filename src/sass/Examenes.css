@@ -59,15 +59,31 @@
   border-bottom: 10px white;
 }
 .exams .cardsExamsLevels .cardExamsLevels .btnLvls .card-body .card-title h3 {
-  text-transform: 10px;
   font-weight: bold;
 }
 
-@media screen and (max-width: 407px) {
+@media screen and (max-width: 576px) {
   .examsCard {
     width: auto;
   }
+  .exams .cardsExams {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .exams .cardsExams .cardExams {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
   .exams .cardsExams .cardExams .btn {
     width: auto !important;
+  }
+  .exams .cardsExams .cardExams .card-body .card-title h3 {
+    font-size: 1.8em;
+  }
+  .exams .cardsExams .cardExams .card-body h5 {
+    font-size: 1.5em;
+  }
+  .exams .cardsExamsLevels .cardExamsLevels {
+    width: 100%;
   }
 }/*# sourceMappingURL=examenes.css.map */

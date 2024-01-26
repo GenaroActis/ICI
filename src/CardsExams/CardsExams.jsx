@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Button } from 'react-bootstrap';
-import TableExams from './TableExams.jsx'
+import ExamsFotos from './ExamsFotos.jsx'
 import ExamsLevels from "./ExamsLevels.jsx";
 
 const CardsExams = () => {
@@ -11,6 +11,10 @@ const CardsExams = () => {
     const [expanded1, setExpanded1] = useState(false);
     const handleExpand1 = () => {
         setExpanded1(!expanded1);
+    };
+    const [expanded2, setExpanded2] = useState(false);
+    const handleExpand2 = () => {
+        setExpanded2(!expanded2);
     };
     return (
         <div className='cardsExams container-fluid'>
@@ -43,18 +47,18 @@ const CardsExams = () => {
             </Card>
 
             {/* CARD 1 */}
-            <Card className= {expanded1 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
+            <Card className= {expanded2 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
                     <Card.Title><h3>FOTOS</h3></Card.Title>
                 </Card.Body>
-                {/* {expanded1 && (
+                {expanded2 && (
                     <Card.Footer className="cardFooterLvls">
-                        <ExamsLevels/>
+                        <ExamsFotos/>
                     </Card.Footer>
-                )} */}
-                {/* <Button className="btn2" variant="primary" onClick={handleExpand1}>
-                    {expanded1 ? 'Ver Fotos' : 'Leer mas...'}
-                </Button> */}
+                )}
+                <Button className="btn2" variant="primary" onClick={handleExpand2}>
+                    {expanded2 ? 'Ocultar Fotos' : 'Ver Fotos...'}
+                </Button>
             </Card>
         </div>
     )

@@ -64,7 +64,6 @@
                     border-bottom: 10px white;
                     .card-title{
                         h3{
-                            text-transform: 10px;
                             font-weight: bold;
                         }
                     }
@@ -73,17 +72,37 @@
         }
     }
 }
-@media screen and (max-width:407px){
+@media screen and (max-width:576px){
     .examsCard{
         width: auto;
     }
     .exams{
         .cardsExams{
+            padding-left: 1%;
+            padding-right: 1%;
             .cardExams{
+                margin-left: 0px !important;
+                margin-right: 0px !important;
                 .btn{
                     width: auto !important;
                 }
+                .card-body{
+                    .card-title{
+                        h3{
+                            font-size: 1.8em;
+                        }
+                    }
+                    h5{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        .cardsExamsLevels{
+            .cardExamsLevels{
+                width: 100%;
             }
         }
     }
 }
+

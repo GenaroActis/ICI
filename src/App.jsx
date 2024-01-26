@@ -36,7 +36,8 @@ import "./sass/contacto.css";
 import "./sass/examenes.css";
 import "./sass/login.css";
 import "./sass/inscriptos.css";
-import "./sass/configs.css"
+import "./sass/configs.css";
+import "./sass/fotosGrid.css"
 import { ToastContainer} from 'react-toastify';
 
 function App() {
