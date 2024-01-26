@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import "../sass/inputs.css"
 import { StudentContext } from '../Context/StudentContext'
 import { generateNotifyError, generateNotifySuccess } from "../Context/Context"
 import Button from 'react-bootstrap/Button';
@@ -13,7 +12,10 @@ const Inscripcion = () => {
 
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setShow(false)
+        window.location.reload()
+    };
     const handleShow = () => setShow(true);
 
     const handleChangeTransferencia = (e) =>{
@@ -38,12 +40,13 @@ const Inscripcion = () => {
         let paymentMethod = undefined
         if(transferencia === true) paymentMethod = "transferencia"
         else paymentMethod = "efectivo"
+
         const studentData ={
             firstName: document.querySelector('#user_name').value,
             lastName: document.querySelector('#user_surname').value,
             email: document.querySelector('#user_email').value,
             birth: document.querySelector('#user_date').value,
-            dni: document.querySelector('#user_dni').value,
+            dni: parseFloat(document.querySelector('#user_dni').value),
             houseAddress: document.querySelector('#user_address').value,
             cellphone: document.querySelector('#user_phone').value,
             previousLevel: document.querySelector('#user_level').value,
@@ -51,18 +54,20 @@ const Inscripcion = () => {
             preferredTime: turno,
             paymentMethod: paymentMethod
         }
+
         if(transferencia == true){
             const formData = new FormData();
             formData.append('studentData', JSON.stringify(studentData))
             const inputImg = document.querySelector('#receipt')
             if(!inputImg.files[0]) return generateNotifyError('Selecciona tu comprobante!')
-            else formData.append('receipt', inputImg.files[0]);
-            const res = await registerStudent(formData)
-            console.log('ola',formData)
+            else formData.append('file', inputImg.files[0]);
+            const res = await registerStudent(formData, 'transfer')
+            if(res.data == 'SuccessfullyRegisteredStudent'){
+                handleShow()
+            };
         } else {
             const jsonStudentData = JSON.stringify(studentData)
-            const res = await registerStudent(jsonStudentData)
-            console.log(res)
+            const res = await registerStudent(jsonStudentData, 'cash')
             if(res.data == 'SuccessfullyRegisteredStudent'){
                 handleShow()
             };
@@ -72,7 +77,7 @@ const Inscripcion = () => {
     return (
         <>
         <div id='inputs'>
-            <div className='col-11 col-sm-10 col-md-9 col-lg-6 col-xl-5 card'>
+            <div className='col-11 col-sm-10 col-md-9 col-lg-8 col-xl-5 card'>
                 <div className="card-header">
                     <div className="text-header">Inscripcion</div>
                 </div>
@@ -115,7 +120,7 @@ const Inscripcion = () => {
                         <input className="form-control" name="user_medical" id="user_medical" type="text"/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="user_time">Preferencia de Cursado :</label>
+                        <label className='my-4' htmlFor="user_time">Preferencia de Cursado :</label>
                         <div className="wrapper">
                             <input type="radio" name="select1" id="option-1" value="mañana" onChange={handleChangeTurno}/>
                             <input type="radio" name="select1" id="option-2" value="tarde" onChange={handleChangeTurno}/>
@@ -128,7 +133,7 @@ const Inscripcion = () => {
                                 <span>Tarde</span>
                             </label>
                         </div>
-                        <label className='mt-4' htmlFor="user_time">Metodo de Pago :</label>
+                        <label className='my-4' htmlFor="user_time">Metodo de Pago :</label>
                         <div className="wrapper">
                             <input type="radio" name="select2" id="option-3" value="efectivo" onChange={handleChangeTransferencia}/>
                             <input type="radio" name="select2" id="option-4" value="transferencia" onChange={handleChangeTransferencia}/>

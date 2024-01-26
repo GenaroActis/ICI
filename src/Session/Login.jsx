@@ -1,27 +1,31 @@
 import React, { useContext, useState } from 'react'
+import { UserContext } from '../Context/UserContext';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    // const { login, registerGithub, sendRecoverPassEmail  } = useContext(UserContext)
+    const { loginUser,  sendRecoverPassEmail } = useContext(UserContext)
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const handleSubmitLogin = (event) => {
+    const handleSubmitLogin = async (event) => {
         event.preventDefault();
-        const email = document.querySelector('#email').value
-        const password = document.querySelector('#password').value
-        // login(email, password)
-        console.log(email, password)
+        const email = document.querySelector('#user_email').value
+        const password = document.querySelector('#user_password').value
+        const userData = {
+            email: email,
+            password: password
+        }
+        await loginUser(userData)
     };
     const handleSubmitRecoverPass = async (event) => {
         event.preventDefault();
         const email = document.querySelector('#recoverEmail').value
-        // const res = await sendRecoverPassEmail(email)
-        // if(res) handleClose()
-        console.log(email)
+        const body = {email: email}
+        const res = await sendRecoverPassEmail(body)
+        if(res.data == 'sentSuccessfully') handleClose()
     };
     return (
     <>
@@ -30,20 +34,22 @@ const Login = () => {
             <div className="row justify-content-center align-items-center h-100">
                 <div className="col-12">
                     <div className="card shadow-2-strong">
-                        <div className="card-body p-4 p-md-5">
-                        <h3 className="mb-4 text-black pb-2 pb-md-0 mb-md-5 dosEm">Inicio de sesion</h3>
+                        <div className="card-header">
+                            <div className="text-header dosEm">Inicio de sesion</div>
+                        </div>
+                        <div className="card-body">
                             <form id="formLogin" onSubmit={handleSubmitLogin}>
                                 <div className="row">
-                                    <div className="col-md-6 mb-4 d-flex py-5 align-items-center">
-                                        <div className="form-outline w-100">
-                                            <label htmlFor="email" className="form-label unEm text-black">Email</label>
-                                            <input required placeholder='Email' type="email" name="email" className="form-control dosEm form-control-lg" id="email" />
+                                    <div className="d-flex justify-content-center justify-center py-5 align-items-center">
+                                        <div className="form-group logInput">
+                                                <label htmlFor="email">Email :</label>
+                                                <input required className="form-control" name="email" id="user_email" type="email"/>
                                         </div>
                                     </div>
-                                    <div className="col-md-6 mb-4 d-flex py-5 align-items-center">
-                                        <div className="form-outline">
-                                            <label className="form-label unEm text-black" htmlFor="password">Contraseña</label>
-                                            <input required placeholder='Contraseña' type="password" name="password" id="password" className="form-control dosEm form-control-lg" />
+                                    <div className="d-flex justify-content-center py-5 align-items-center">
+                                        <div className="form-group logInput">
+                                            <label htmlFor="password">Contraseña :</label>
+                                            <input required className="form-control" name="password" id="user_password" type="password"/>
                                         </div>
                                     </div>
                                 </div>
@@ -51,22 +57,22 @@ const Login = () => {
                                     <input className="btn buttonLog dosEm" type="submit" value="Login" />
                                 </div>
                             </form>
-                            <Button className='buttonLog unEm' variant="primary" onClick={handleShow}>
+                            <Button className='buttonLog mt-5 unYmedioEm' variant="primary" onClick={handleShow}>
                                 Olvide mi contraseña
                             </Button>
-                            <Modal show={show} onHide={handleClose}>
+                            <Modal className='modalLog' show={show} onHide={handleClose}>
                                 <Modal.Header className='mod-header' closeButton>
-                                    <Modal.Title className='bg-white rounded'>Recuperar contraseña</Modal.Title>
+                                    <Modal.Title className='bg-white unEm rounded'>Recuperar contraseña</Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>
+                                <Modal.Body className='form-group logInput'>
                                     <label className="form-label" htmlFor="recoverEmail">Email</label>
                                     <input required placeholder='Email' type="email" name="recoverEmail" id="recoverEmail" className="form-control form-control-lg" />
                                 </Modal.Body>
                                 <Modal.Footer className='mod-footer'>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button className='buttonLog unYmedioEm' onClick={handleClose}>
                                     Cerrar
                                 </Button>
-                                <Button variant="primary" onClick={handleClose}>
+                                <Button className='buttonLog unYmedioEm' onClick={handleSubmitRecoverPass}>
                                     Enviar mail
                                 </Button>
                                 </Modal.Footer>

@@ -4,13 +4,15 @@ import { generateNotifyError, generateNotifySuccess } from './Context.jsx'
 export const StudentContext = createContext();
 
 const StudentProvider = ({children}) =>{
-    const registerStudent = async (studentData) =>{
+
+    const registerStudent = async (studentData, paymentMethod) =>{
         try {
-            const response = await fetch(`${fetchUrl}/api/student/register`,{
+            let setHeader = undefined
+            if(paymentMethod == 'cash') setHeader = {'Content-Type': 'application/json'}
+            else setHeader = {}
+            const response = await fetch(`${fetchUrl}/api/student/${paymentMethod}`,{
                 method: 'POST',
-                headers:{
-                    'Content-Type': 'application/json',
-                },
+                headers: setHeader,
                 body: studentData,
             });
             if(response.ok){
@@ -21,10 +23,10 @@ const StudentProvider = ({children}) =>{
                 if(res.errors == 'DNIAlreadyRegistered') return generateNotifyError('Ya existe un estudiante con ese DNI!')
             }
         } catch (error) {
-            console.log(error)
             throw new Error(error);
         };
     };
+
     return (
         <StudentContext.Provider value={{registerStudent,}}>
         {children}

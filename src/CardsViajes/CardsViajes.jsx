@@ -15,24 +15,15 @@ const CardsViajes = () => {
             {/* CARD 0 */}
             <Card className= {expanded0 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
-                    <Card.Title><h3>Informacion del Viaje</h3></Card.Title>
-                        <h5>FECHAS -  INSCRIPCIÓN.</h5>
+                    <Card.Title><h3>Descripcion viajes educativos</h3></Card.Title>
+                    <h5>...</h5>
                 </Card.Body>
-                {expanded0 && (
-                    <Card.Footer>
-                        {/* <TableExams/> */}
-                    </Card.Footer>
-                )}
-                <Button className="btn2" variant="primary" onClick={handleExpand0}>
-                    {expanded0 ? 'Leer menos' : 'Leer mas...'}
-                </Button>
             </Card>
 
             {/* CARD 1 */}
             <Card className= {expanded1 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
-                    <Card.Title><h3>Costo Total</h3></Card.Title>
-                    <h5>COSTO DEL VIAJE.</h5>
+                    <Card.Title><h3>Fotos</h3></Card.Title>
                 </Card.Body>
                 {expanded1 && (
                     <Card.Footer className="cardFooterLvls">
@@ -40,7 +31,7 @@ const CardsViajes = () => {
                     </Card.Footer>
                 )}
                 <Button className="btn2" variant="primary" onClick={handleExpand1}>
-                    {expanded1 ? 'Leer menos' : 'Leer mas...'}
+                    {expanded1 ? 'Ocultar imagenes' : 'Ver imagenes...'}
                 </Button>
             </Card>
         </div>

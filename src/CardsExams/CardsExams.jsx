@@ -17,24 +17,20 @@ const CardsExams = () => {
             {/* CARD 0 */}
             <Card className= {expanded0 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
-                    <Card.Title><h3>Fechas de incripción y examen</h3></Card.Title>
-                        <h5>INFORMACIÓN ADMINISTRATIVA - EXÁMENES EN PAPEL.</h5>
+                    <Card.Title><h3>Anglia Exams</h3></Card.Title>
+                    <h5>Examenes Internacionales</h5>
                 </Card.Body>
-                {expanded0 && (
-                    <Card.Footer>
-                        <TableExams/>
-                    </Card.Footer>
-                )}
-                <Button className="btn2" variant="primary" onClick={handleExpand0}>
-                    {expanded0 ? 'Leer menos' : 'Leer mas...'}
-                </Button>
+                <a href="https://www.anglia.org/">
+                    <div className='div-img-anglia-exams'>
+                        <img className='w-50' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1679514874/ici/Anglia_Logo_2015_No_background_1_2_tlnnnf.png" alt="" />
+                    </div>
+                </a>
             </Card>
 
             {/* CARD 1 */}
             <Card className= {expanded1 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
                 <Card.Body>
-                    <Card.Title><h3>Niveles de Examen</h3></Card.Title>
-                    <h5>TIPOS DE EXÁMENES.</h5>
+                    <Card.Title><h3>Niveles</h3></Card.Title>
                 </Card.Body>
                 {expanded1 && (
                     <Card.Footer className="cardFooterLvls">
@@ -44,6 +40,21 @@ const CardsExams = () => {
                 <Button className="btn2" variant="primary" onClick={handleExpand1}>
                     {expanded1 ? 'Leer menos' : 'Leer mas...'}
                 </Button>
+            </Card>
+
+            {/* CARD 1 */}
+            <Card className= {expanded1 ? 'expanded-card cardExams m-4' : 'collapsed-card cardExams m-4'}>
+                <Card.Body>
+                    <Card.Title><h3>FOTOS</h3></Card.Title>
+                </Card.Body>
+                {/* {expanded1 && (
+                    <Card.Footer className="cardFooterLvls">
+                        <ExamsLevels/>
+                    </Card.Footer>
+                )} */}
+                {/* <Button className="btn2" variant="primary" onClick={handleExpand1}>
+                    {expanded1 ? 'Ver Fotos' : 'Leer mas...'}
+                </Button> */}
             </Card>
         </div>
     )
