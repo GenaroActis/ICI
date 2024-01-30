@@ -178,6 +178,19 @@
   font-weight: 600;
 }
 
+.cursos {
+  background-color: #ffffff;
+  background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 20px 20px, linear-gradient(rgba(0, 2, 137, 0.4078431373) 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, rgba(0, 2, 137, 0.4078431373) 1.6px, #ffffff 1.6px) -0.8px 0;
+  background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
+.cursos .carousel-cursos {
+  display: flex;
+  justify-content: center;
+}
+.cursos .carousel-cursos .carousel {
+  width: 30vw;
+}
+
 @media screen and (max-width: 1600px) {
   .carousel-index .carousel-inner .carousel-item .carousel-img-div .img-young-girl {
     transform: translate(0%, -10%);
@@ -234,6 +247,9 @@
   .carousel-index .carousel-inner .carousel-item .carousel-img-div .img-young-girl {
     transform: translate(0%, 0%);
   }
+  .cursos .carousel-cursos .carousel {
+    width: 50vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .carousel-index .carousel-inner .carousel-item {
@@ -257,6 +273,9 @@
   }
   .card-index {
     width: 98vw !important;
+  }
+  .cursos .carousel-cursos .carousel {
+    width: 100%;
   }
 }
 @media screen and (max-width: 576px) {

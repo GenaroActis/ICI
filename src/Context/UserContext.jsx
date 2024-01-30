@@ -19,7 +19,7 @@ const UserProvider = ({children}) =>{
                 return res 
             } else {
                 const res = await response.json()
-                if(res.errors == 'invalidCredentials') return generateNotifyError('Email o contraseña incorrectos!')
+                if(res.errors === 'invalidCredentials') return generateNotifyError('Email o contraseña incorrectos!')
             }
         } catch (error) {
             generateNotifyError('Hubo un error, prueba mas tarde!')
@@ -37,11 +37,11 @@ const UserProvider = ({children}) =>{
             });
             if(response.ok){
                 const res = await response.json()
-                if(res.data == 'sentSuccessfully') generateNotifySuccess('Email enviado correctamente!')
+                if(res.data === 'sentSuccessfully') generateNotifySuccess('Email enviado correctamente!')
                 return res
             } else {
                 const res = await response.json()
-                if(res.errors == 'theMailIsNotRegistered') return generateNotifyError('Email no registrado!')
+                if(res.errors === 'theMailIsNotRegistered') return generateNotifyError('Email no registrado!')
             }
         } catch (error) {
             generateNotifyError('Hubo un error, prueba mas tarde!')
@@ -65,9 +65,9 @@ const UserProvider = ({children}) =>{
                 return res
             } else {
                 const error = await response.json();
-                if(error.errors == 'thePasswordsAreTheSame') return generateNotifyError('Esta es la contraseña actual!')
-                if(error.errors == 'expiredToken') return generateNotifyError('Tu token expiro, vuelve a enviar el Email!')
-                if(error.errors == 'veryShort') return generateNotifyError('La contraseña debe tener mas de 6 caracteres!')
+                if(error.errors === 'thePasswordsAreTheSame') return generateNotifyError('Esta es la contraseña actual!')
+                if(error.errors === 'expiredToken') return generateNotifyError('Tu token expiro, vuelve a enviar el Email!')
+                if(error.errors === 'veryShort') return generateNotifyError('La contraseña debe tener mas de 6 caracteres!')
                 generateNotifyError('Hubo un error, prueba mas tarde!')
             }
         } catch (error) {
@@ -92,7 +92,7 @@ const UserProvider = ({children}) =>{
                 return res
             } else {
                 const res = await response.json()
-                if(res.errors == 'theMailIsNotRegistered') return generateNotifyError('Email no registrado!')
+                if(res.errors === 'theMailIsNotRegistered') return generateNotifyError('Email no registrado!')
             }
         } catch (error) {
             generateNotifyError('Hubo un error, prueba mas tarde!')

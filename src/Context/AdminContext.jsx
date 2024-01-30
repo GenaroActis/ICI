@@ -22,7 +22,7 @@ const AdminProvider = ({children}) =>{
                 return res 
             } else {
                 const res = await response.json()
-                if(res.errors == 'onlyAdminsAreAuthorized') generateNotifyError('No estas autorizado!')
+                if(res.errors === 'onlyAdminsAreAuthorized') generateNotifyError('No estas autorizado!')
                 if(res.errors === 'RepeatedDni') generateNotifyError('Ya existe un estudiante con ese DNI!')
                 return res
             }

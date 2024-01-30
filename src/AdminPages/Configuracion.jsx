@@ -9,10 +9,10 @@ const Configuracion = () => {
                 </div>
                 <div className='text-center th-header flex-column align-items-center d-flex my-4'>
                     <h2 className='dosEm th-nouns'>Inscripciones</h2>
-                    <div class="toggle-border mt-4">
+                    <div className="toggle-border mt-4">
                         <input id="one" type="checkbox"/>
-                        <label for="one">
-                            <div class="handle"></div>
+                        <label htmlFor="one">
+                            <div className="handle"></div>
                         </label>
                     </div>
                     <h4 className='unYmedioEm th-nouns'>Precio $</h4>

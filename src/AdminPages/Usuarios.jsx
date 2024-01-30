@@ -11,7 +11,6 @@ const Usuarios = () => {
     const { getUsers, addUser, changeUserRole, deleteUser } = useContext(AdminContext)
     let { page, key, value, sortField, sortOrder } = useParams()
     const [usersData, setUsersData] = useState([]);
-    const [pagData, setPagData] = useState([]);
 
     const [selectedUser, setSelectedUser] = useState(null);
 
@@ -39,14 +38,13 @@ const Usuarios = () => {
     const fetchData = async () => {
         const res = await getUsers(page, key, value, sortField, sortOrder);
         setUsersData(res.data.results);
-        setPagData(res.data.info);
         setLoading(false);
     };
 
     const handleAddUser = async (event) =>{
         event.preventDefault()
         const newUserEmail = {teacherEmail: document.querySelector('#new_user_email').value}
-        const res = await addUser(newUserEmail)
+        await addUser(newUserEmail)
     };
 
     const handleChangeUserRole = async() =>{

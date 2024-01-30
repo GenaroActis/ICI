@@ -45,10 +45,10 @@ const Header = () => {
                             </div>
                         </Dropdown.Toggle>
                         <Dropdown.Menu className='menuContainer'>
-                            <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/viajes">VIAJES<FontAwesomeIcon icon={faPlane} className='ms-1'/></Dropdown.Item>
-                            <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/examenes">EXAMENES<FontAwesomeIcon icon={faFileSignature} className='ms-1'/></Dropdown.Item>
-                            <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/cursos"> CURSOS<FontAwesomeIcon icon={faGraduationCap} className='ms-1'/></Dropdown.Item>
-                            <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/cursos"> EVENTOS<FontAwesomeIcon icon={faUsers} className='ms-1'/></Dropdown.Item>
+                            <Link to={'/ici/viajes'} className='dropDownItems dropdown-item p-3 nav-link' >VIAJES<FontAwesomeIcon icon={faPlane} className='ms-1'/></Link>
+                            <Link to={'/ici/examenes'} className='dropDownItems dropdown-item p-3 nav-link'>EXAMENES<FontAwesomeIcon icon={faFileSignature} className='ms-1'/></Link>
+                            <Link to={'/ici/cursos'} className='dropDownItems dropdown-item p-3 nav-link'>CURSOS<FontAwesomeIcon icon={faGraduationCap} className='ms-1'/></Link>
+                            {/* <Dropdown.Item className='dropDownItems p-3 nav-link' href="/ici/eventos">EVENTOS<FontAwesomeIcon icon={faUsers} className='ms-1'/></Dropdown.Item> */}
                         </Dropdown.Menu>
                     </Dropdown>
                 </ul>

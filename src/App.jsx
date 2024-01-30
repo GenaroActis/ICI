@@ -5,6 +5,7 @@ import Contacto from "./Pages/Contacto";
 import Inscripcion from "./Pages/Inscripcion";
 import Viajes from "./Pages/Viajes";
 import Examenes from "./Pages/Examenes";
+import Eventos from "./Pages/Eventos"
 import Cursos from "./Pages/Cursos";
 import Login from "./Session/Login";
 import HeaderLog from "./Session/HeaderLog";
@@ -70,6 +71,7 @@ function App() {
               <Route exact path="viajes" element={<Viajes />} />
               <Route exact path="examenes" element={<Examenes />} />
               <Route exact path="cursos" element={<Cursos />} />
+              <Route exact path="eventos" element={<Eventos />}/>
             </Route>
             <Route
               path="/inicio/*"

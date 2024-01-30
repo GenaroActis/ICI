@@ -3,21 +3,9 @@ import {Context} from "../Context/Context";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars, faChildren, faUsers, faGears, faComments} from '@fortawesome/free-solid-svg-icons'
-import Dropdown from 'react-bootstrap/Dropdown';
 
 const HeaderUser = () => {
     let {sideBarOpen} = useContext(Context)
-    const [showCard, setShowCard] = useState(true);
-    useEffect(() => {
-        const handleScroll = () => {
-            const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
-            setShowCard(!isBottom);
-            };
-            window.addEventListener('scroll', handleScroll);
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     return (
         <>
         <div id='header'>
@@ -34,7 +22,7 @@ const HeaderUser = () => {
                             <li className='div-nav-link  d-md-block d-none m-1'><Link to={'/usuario/inscriptos'} className="nav-link px-1 py-3 d-flex">INSCRIPTOS<FontAwesomeIcon icon={faChildren} className='ms-1' /></Link></li>
                             <li className='div-nav-link d-md-block d-none m-1'><Link to={'/usuario/usuarios'} className="nav-link d-flex px-1 py-3">USUARIOS<FontAwesomeIcon icon={faUsers} className='ms-1'/></Link></li>
                             <li className='div-nav-link d-md-block d-none m-1'><Link to={'/usuario/configuracion'} className="nav-link d-flex px-1 py-3">CONFIGURACION<FontAwesomeIcon icon={faGears} className='ms-1'/></Link></li>
-                            <li className='div-nav-link d-md-block d-none m-1'><Link to={'/ici/contacto'} className="nav-link d-flex px-1 py-3">SOPORTE<FontAwesomeIcon icon={faComments} className='ms-1'/></Link></li>
+                            <li className='div-nav-link d-md-block d-none m-1'><a className="nav-link d-flex px-1 py-3">SOPORTE<FontAwesomeIcon icon={faComments} className='ms-1'/></a></li>
                         </div>
                     </ul>
                 </header>

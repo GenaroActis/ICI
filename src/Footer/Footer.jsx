@@ -29,12 +29,13 @@ const Footer = () => {
             </div>
             <div className="container-fluid d-none flex-column d-md-flex pb-2">
                 <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici'} className="nav-link px-1 py-3 d-flex inicio">INICIO</Link></li>
-                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/inscripcion'} className="nav-link d-flex px-1 py-3 inscripcion">INSCRIPCION</Link></li>
-                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/contacto'} className="nav-link d-flex px-1 py-3 contacto">CONTACTO</Link></li>
-                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/viajes'} className="nav-link d-flex px-1 py-3 viajes">VIAJES</Link></li>
-                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/examenes'} className="nav-link d-flex px-1 py-3 examenes">EXAMENES</Link></li>
-                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/cursos'} className="nav-link d-flex px-1 py-3 cursos">CURSOS</Link></li>
+                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici'} className="nav-link px-1 py-3 d-flex">INICIO</Link></li>
+                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/inscripcion'} className="nav-link d-flex px-1 py-3">INSCRIPCION</Link></li>
+                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/contacto'} className="nav-link d-flex px-1 py-3">CONTACTO</Link></li>
+                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/viajes'} className="nav-link d-flex px-1 py-3">VIAJES</Link></li>
+                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/examenes'} className="nav-link d-flex px-1 py-3">EXAMENES</Link></li>
+                    <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/cursos'} className="nav-link d-flex px-1 py-3">CURSOS</Link></li>
+                    {/* <li className="nav-item fw-bold" onClick={upMenu}><Link to={'/ici/eventos'} className="nav-link d-flex px-1 py-3">EVENTOS</Link></li> */}
                 </ul>
                 <p className="text-center text-body-secondary fw-bold">© {currentYear} Todos los derechos reservados</p>
             </div>
