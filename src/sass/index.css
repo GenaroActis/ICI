@@ -34,8 +34,16 @@
   font-weight: bolder !important;
 }
 
+.padding-foot {
+  padding-bottom: 7% !important;
+}
+
+.padding-head {
+  padding-top: 2% !important;
+}
+
 .content {
-  font-size: 25px;
+  font-size: 15px;
 }
 @media screen and (max-width: 2200px) {
   .content {
@@ -84,9 +92,6 @@
 
 .carousel-index {
   width: 100%;
-}
-.carousel-index .carousel-inner .carousel-item {
-  height: 1000px;
 }
 .carousel-index .carousel-inner .carousel-item .carousel-img-div {
   height: 700px;
@@ -200,9 +205,6 @@
   }
 }
 @media screen and (max-width: 1400px) {
-  .carousel-index .carousel-inner .carousel-item {
-    height: 700px;
-  }
   .carousel-index .carousel-inner .carousel-item .carousel-img-div {
     height: 500px;
   }
@@ -223,11 +225,14 @@
   .carousel-index .carousel-inner .carousel-item .carousel-img-div .img-exams {
     transform: translate(0%, -10%);
   }
+  .padding-head {
+    padding-top: 2% !important;
+  }
+  .padding-foot {
+    padding-bottom: 8% !important;
+  }
 }
 @media screen and (max-width: 992px) {
-  .carousel-index .carousel-inner .carousel-item {
-    height: 700px;
-  }
   .carousel-index .carousel-inner .carousel-item .carousel-img-div {
     height: 500px;
     display: flex;
@@ -250,11 +255,14 @@
   .cursos .carousel-cursos .carousel {
     width: 50vw;
   }
+  .padding-head {
+    padding-top: 8% !important;
+  }
+  .padding-foot {
+    padding-bottom: 10% !important;
+  }
 }
 @media screen and (max-width: 768px) {
-  .carousel-index .carousel-inner .carousel-item {
-    height: 600px;
-  }
   .carousel-index .carousel-inner .carousel-item .carousel-img-div {
     height: 400px;
     overflow: hidden;
@@ -268,14 +276,14 @@
   .carousel-index .carousel-inner .carousel-item .carousel-caption-div .carousel-caption p {
     font-size: 2em;
   }
-  .paddingFooter {
-    padding-bottom: 14%;
-  }
   .card-index {
     width: 98vw !important;
   }
   .cursos .carousel-cursos .carousel {
     width: 100%;
+  }
+  .padding-foot {
+    padding-bottom: 13% !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -285,8 +293,11 @@
   .a-anglia .fade-header .text-end .div-anglia .div-img-anglia {
     width: 40%;
   }
-  .paddingFooter {
-    padding-bottom: 20%;
+  .padding-head {
+    padding-top: 10% !important;
+  }
+  .padding-foot {
+    padding-bottom: 16% !important;
   }
 }
 @media screen and (max-width: 420px) {
@@ -298,5 +309,11 @@
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
+  }
+  .padding-head {
+    padding-top: 14% !important;
+  }
+  .padding-foot {
+    padding-bottom: 20% !important;
   }
 }/*# sourceMappingURL=index.css.map */

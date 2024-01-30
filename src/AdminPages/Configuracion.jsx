@@ -2,7 +2,7 @@ import React from 'react'
 
 const Configuracion = () => {
     return (
-        <div className='inscriptos'>
+        <div className='inscriptos padding-foot padding-head'>
             <div className='card'>
                 <div className="card-header">
                     <div className="text-header unEm">Configuracion</div>

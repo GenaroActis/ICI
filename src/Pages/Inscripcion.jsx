@@ -76,7 +76,7 @@ const Inscripcion = () => {
 
     return (
         <>
-        <div id='inputs'>
+        <div id='inputs' className='padding-foot padding-head'>
             <div className='col-11 col-sm-10 col-md-9 col-lg-8 col-xl-5 card'>
                 <div className="card-header">
                     <div className="text-header">Inscripcion</div>

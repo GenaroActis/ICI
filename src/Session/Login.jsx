@@ -29,57 +29,45 @@ const Login = () => {
     };
     return (
     <>
-    <div className='login d-flex justify-content-center flex-column'>
-        <div className="container text-white py-5 h-100">
-            <div className="row justify-content-center align-items-center h-100">
-                <div className="col-12">
-                    <div className="card shadow-2-strong">
-                        <div className="card-header">
-                            <div className="text-header dosEm">Inicio de sesion</div>
+    <div id='inputs' className='login padding-foot padding-head d-flex justify-content-center flex-column'>
+        <div className="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-5 card" >
+            <div className="card-header">
+                <div className="text-header dosEm">Inicio de sesion</div>
+            </div>
+            <div className="card-body">
+                <form id="formLogin" onSubmit={handleSubmitLogin}>
+                    <div className="row">
+                        <div className="form-group my-3">
+                            <label htmlFor="email">Email :</label>
+                            <input required className="form-control" name="email" id="user_email" type="email"/>
                         </div>
-                        <div className="card-body">
-                            <form id="formLogin" onSubmit={handleSubmitLogin}>
-                                <div className="row">
-                                    <div className="d-flex justify-content-center justify-center py-5 align-items-center">
-                                        <div className="form-group logInput">
-                                                <label htmlFor="email">Email :</label>
-                                                <input required className="form-control" name="email" id="user_email" type="email"/>
-                                        </div>
-                                    </div>
-                                    <div className="d-flex justify-content-center py-5 align-items-center">
-                                        <div className="form-group logInput">
-                                            <label htmlFor="password">Contraseña :</label>
-                                            <input required className="form-control" name="password" id="user_password" type="password"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="d-flex justify-content-center p-4">
-                                    <input className="btn buttonLog dosEm" type="submit" value="Login" />
-                                </div>
-                            </form>
-                            <Button className='buttonLog mt-5 unYmedioEm' variant="primary" onClick={handleShow}>
-                                Olvide mi contraseña
-                            </Button>
-                            <Modal className='modalLog' show={show} onHide={handleClose}>
-                                <Modal.Header className='mod-header' closeButton>
-                                    <Modal.Title className='bg-white unEm rounded'>Recuperar contraseña</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body className='form-group logInput'>
-                                    <label className="form-label" htmlFor="recoverEmail">Email</label>
-                                    <input required placeholder='Email' type="email" name="recoverEmail" id="recoverEmail" className="form-control form-control-lg" />
-                                </Modal.Body>
-                                <Modal.Footer className='mod-footer'>
-                                <Button className='buttonLog unYmedioEm' onClick={handleClose}>
-                                    Cerrar
-                                </Button>
-                                <Button className='buttonLog unYmedioEm' onClick={handleSubmitRecoverPass}>
-                                    Enviar mail
-                                </Button>
-                                </Modal.Footer>
-                            </Modal>
+                        <div className="form-group my-3">
+                            <label htmlFor="password">Contraseña :</label>
+                            <input required className="form-control" name="password" id="user_password" type="password"/>
                         </div>
                     </div>
-                </div>
+                    <input className="btn2" type="submit" value="Login" />
+                </form>
+                <Button className='btn3 mt-2' variant="primary" onClick={handleShow}>
+                    Olvide mi contraseña
+                </Button>
+                <Modal className='modalLog' show={show} onHide={handleClose}>
+                    <Modal.Header className='mod-header' closeButton>
+                        <Modal.Title className='bg-white rounded'>Recuperar contraseña</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className='form-group logInput'>
+                        <label className="form-label" htmlFor="recoverEmail">Email</label>
+                        <input required placeholder='Email' type="email" name="recoverEmail" id="recoverEmail" className="form-control form-control-lg" />
+                    </Modal.Body>
+                    <Modal.Footer className='mod-footer'>
+                    <Button className='btn4 unEm' onClick={handleClose}>
+                        Cerrar
+                    </Button>
+                    <Button className='btn4 unEm' onClick={handleSubmitRecoverPass}>
+                        Enviar mail
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         </div>
     </div>  

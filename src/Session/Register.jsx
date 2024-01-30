@@ -19,54 +19,45 @@ const Register = () => {
                 dni:document.querySelector('#user_dni').value
             }
             registerUser(registerToken, userData)
-            console.log(userData)
         } else generateNotifyError('Las constraseñas deben coincidir!')
     };
     return (
     <>
-        <div className='login d-flex justify-content-center flex-column'>
-            <div className="text-white py-5 h-100">
-                <div className="row justify-content-center align-items-center h-100">
-                    <div className="col-12">
-                        <div className="card d-flex flex-column align-items-center shadow-2-strong">
-                            <div className="card-header">
-                                <div className="text-header dosEm">Registro</div>
-                            </div>
-                            <div className="card-body p-4 p-md-5">
-                                <form id="formLogin" onSubmit={handleSubmitRegister}>
-                                    <div className='d-flex justify-content-center align-items-center flex-column'>
-                                        <div className="form-group logInput py-4">
-                                            <label htmlFor="firstname">Nombre :</label>
-                                            <input required className="form-control" name="firstname" id="user_firstname" type="text"/>
-                                        </div>
-                                        <div className="form-group logInput py-4">
-                                            <label htmlFor="lastName">Apellido :</label>
-                                            <input required className="form-control" name="lastName" id="user_lastname" type="text"/>
-                                        </div>
-                                        <div className="form-group logInput py-4">
-                                            <label htmlFor="email">Email :</label>
-                                            <input required className="form-control" name="email" id="user_email" type="email"/>
-                                        </div>
-                                        <div className="form-group logInput py-4">
-                                            <label htmlFor="password">Contraseña :</label>
-                                            <input required className="form-control" name="password" id="user_password" type="password"/>
-                                        </div>
-                                        <div className="form-group logInput py-4">
-                                            <label htmlFor="password">Confirmar contraseña :</label>
-                                            <input required className="form-control" name="password" id="user_password_confirm" type="password"/>
-                                        </div>
-                                        <div className="form-group logInput py-4">
-                                            <label htmlFor="dni">DNI :</label>
-                                            <input required className="form-control" name="dni" id="user_dni" type="number"/>
-                                        </div>
-                                    </div>
-                                    <div className="d-flex justify-content-center p-4">
-                                        <input className="btn buttonLog dosEm" type="submit" value="Registrarse" />
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+        <div id='inputs' className='padding-foot padding-head'>
+                <div className="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-5 card">
+                    <div className="card-header">
+                        <div className="text-header">Registro</div>
                     </div>
+                <div className="card-body">
+                    <form onSubmit={handleSubmitRegister}>
+                            <div className="form-group">
+                                <label htmlFor="firstname">Nombre :</label>
+                                <input required className="form-control" name="firstname" id="user_firstname" type="text"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="lastName">Apellido :</label>
+                                <input required className="form-control" name="lastName" id="user_lastname" type="text"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Email :</label>
+                                <input required className="form-control" name="email" id="user_email" type="email"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="password">Contraseña :</label>
+                                <input required className="form-control" name="password" id="user_password" type="password"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="password">Confirmar contraseña :</label>
+                                <input required className="form-control" name="password" id="user_password_confirm" type="password"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="dni">DNI :</label>
+                                <input required className="form-control" name="dni" id="user_dni" type="number"/>
+                            </div>
+                        <div className="d-flex justify-content-center p-4">
+                            <input className="btn2" type="submit" value="Registrarse" />
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>  

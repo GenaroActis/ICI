@@ -5,7 +5,7 @@ import { Card } from 'react-bootstrap';
 const Contacto = () => {
     return (
     <>
-        <div id="contacto">
+        <div id="contacto" className='padding-foot padding-head'>
             <Card id="card" className="text-center" style={{ fontFamily: 'Exo', marginTop: '7px', boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.5)' }}>
                 <Card.Body>
                 <h1 className="tresEm">

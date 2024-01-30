@@ -1,24 +1,3 @@
-.login{
-    display: flex;
-    background-image: url(https://res.cloudinary.com/dsdicaf5h/image/upload/v1679581045/ici/mesh-145_wth0ww.png);
-    background-size: cover;
-    align-items: center;
-    padding: 10%;
-}
-
-.buttonLog{
-    background-color: #000289 !important;
-    border-radius: 5px;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    box-shadow: 0px 6px 0px #000262 ;
-    transition: all .1s;
-    text-align: center;
-    line-height: 1 !important;
-    border-color: #000289 !important;
-    color: white;
-}
-
 .mas-background {
     background-color: #ffffff;
     background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 20px 20px, linear-gradient(#00028968 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, #00028968 1.6px, #ffffff 1.6px) -0.8px 0;
@@ -33,29 +12,11 @@
     border-top: solid 4px #000289;
 }
 
-.logInput{
-    width: 60vw;
-}
-
-.modalLog {
-    div{
-        max-width: 50vw;
-        width: auto;
-    }
-}
-
 @media screen and (max-width: 992px){
     .login{
         padding: 10% 0%;
         div{
-            max-width: 90vw;
             margin: 0%;
-        }
-    }
-    .modalLog {
-        div{
-            max-width: 70vw;
-            width: auto;
         }
     }
 }
@@ -63,17 +24,12 @@
     .login{
         padding: 20% 0%;
         div{
+            padding-right: 2px;
+            padding-left: 2px;
             width: 100%;
-            max-width: 100vw;
         }
     }
     .logInput{
         width: 100%;
-    }
-    .modalLog {
-        div{
-            max-width: 100%;
-            width: auto;
-        }
     }
 }

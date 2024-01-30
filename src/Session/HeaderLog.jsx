@@ -8,7 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 const HeaderLog = () => {
     return (
         <>
-        <div id='header'>
+            <div id='header'>
                 <header className="d-flex p-4 justify-content-around py-2 py-sm-1">
                     <div className="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-2 py-2">
                         <div className="d-inline-flex link-body-emphasis text-decoration-none">
@@ -18,9 +18,9 @@ const HeaderLog = () => {
                         </div>
                     </div>
                 </header>
-            <div className='borderHeader'>
+                <div className='borderHeader m-0'>
+                </div>
             </div>
-        </div>
         </>
     )
 }

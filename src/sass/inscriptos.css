@@ -126,4 +126,15 @@
   .inscriptos {
     padding: 14% 0.2%;
   }
+  .inscriptos .card {
+    padding: 0% !important;
+  }
+  .td-border {
+    padding: 0.2% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .td-border {
+    padding: 0% !important;
+  }
 }/*# sourceMappingURL=inscriptos.css.map */

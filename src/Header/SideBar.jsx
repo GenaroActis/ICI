@@ -19,12 +19,12 @@ const SideBar = () => {
                             </div>
                             <hr/>
                             <ul className="nav nav-pills flex-column ">
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mt-5 mb-5 my-2'><Link to={'/ici'} className="nav-link p-3">INICIO<FontAwesomeIcon icon={faHouse} className='mx-2' /></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-4'><Link to={'/ici/inscripcion'} className="nav-link p-3">INSCRIPCION<FontAwesomeIcon icon={faPenToSquare} className='mx-2'/></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/contacto'} className="nav-link p-3">CONTACTO<FontAwesomeIcon icon={faAddressCard} className='mx-2'/></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/viajes'} className="nav-link p-3">VIAJES<FontAwesomeIcon icon={faPlane} className='mx-2'/></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/examenes'} className="nav-link p-3">EXAMENES<FontAwesomeIcon icon={faFileSignature} className='mx-2'/></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/cursos'} className="nav-link p-3">CURSOS<FontAwesomeIcon icon={faGraduationCap} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link my-4'><Link to={'/ici'} className="nav-link p-3">INICIO<FontAwesomeIcon icon={faHouse} className='mx-2' /></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link my-4'><Link to={'/ici/inscripcion'} className="nav-link p-3">INSCRIPCION<FontAwesomeIcon icon={faPenToSquare} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link my-4'><Link to={'/ici/contacto'} className="nav-link p-3">CONTACTO<FontAwesomeIcon icon={faAddressCard} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link my-4'><Link to={'/ici/viajes'} className="nav-link p-3">VIAJES<FontAwesomeIcon icon={faPlane} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link my-4'><Link to={'/ici/examenes'} className="nav-link p-3">EXAMENES<FontAwesomeIcon icon={faFileSignature} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link my-4'><Link to={'/ici/cursos'} className="nav-link p-3">CURSOS<FontAwesomeIcon icon={faGraduationCap} className='mx-2'/></Link></li>
                             </ul>
                             <hr/>
                         </div> 

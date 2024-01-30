@@ -66,7 +66,7 @@ const Usuarios = () => {
     } else {
         return (
             <>
-            <div className='inscriptos'>
+            <div className='inscriptos padding-foot padding-head'>
                 <div className="form-group p-2 table-responsive card">
                     <div className="card-header">
                         <div className="text-header unEm">Usuarios</div>
@@ -110,7 +110,7 @@ const Usuarios = () => {
                                 <label htmlFor="new_user_email" className='unEm'>Email del nuevo usuario</label>
                                 <input required id='new_user_email' defaultValue='' className="form-control unEm bg-white" type="email"/>
                             </div>
-                            <input type='submit' value='Enviar' className='buttonLog unYmedioEm'/>
+                            <input type='submit' value='Enviar' className='btn3 unYmedioEm'/>
                         </form>
                     </div>
                     {selectedUser && (
@@ -136,7 +136,7 @@ const Usuarios = () => {
                                 {selectedUser.role === 'owner' ? null : (
                                     <Button onClick={handleShowDeleteUser} className='bg-danger border border-danger m-2 dosEm'><FontAwesomeIcon icon={faTrashCan}/></Button>
                                 )}
-                                <Button className='buttonLog unYmedioEm' onClick={handleClose}>
+                                <Button className='btn4 unYmedioEm' onClick={handleClose}>
                                     Cerrar
                                 </Button>
                             </Modal.Footer>
@@ -151,7 +151,7 @@ const Usuarios = () => {
                             </Modal.Body>
                             <Modal.Footer className='mod-footer'>
                                 <Button onClick={handleDeleteUser} className='bg-danger border border-danger m-2 unYmedioEm'>Eliminar</Button>
-                                <Button className='buttonLog unYmedioEm' onClick={handleCloseDelete}>
+                                <Button className='btn4 unYmedioEm' onClick={handleCloseDelete}>
                                     Cerrar
                                 </Button>
                             </Modal.Footer>

@@ -189,11 +189,11 @@ const Inscriptos = () => {
     } else {
         return (
             <>
-            <div className='inscriptos'>
+            <div className='inscriptos padding-foot padding-head'>
                 <div className='text-center'>
-                    <p className='unEm textColor'>Buscar por...</p>
+                    <p className='dosEm textColor'>Buscar por...</p>
                     <Dropdown drop='down-centered' className='d-flex align-items-center'>
-                        <Dropdown.Toggle className='div-nav-link d-md-block w-100 d-none p-0 m-1'>
+                        <Dropdown.Toggle className='div-nav-link w-100  p-0 m-1'>
                             <div className='nav-link d-flex px-1 py-3 justify-content-center w-100'>
                                 <h2 className='unEm'>{searchKey}</h2>
                             </div>
@@ -209,7 +209,7 @@ const Inscriptos = () => {
                     <div className="d-flex justify-content-center justify-center pt-3 align-items-center">
                         {renderInputSearch()}
                     </div>
-                    <button onClick={handleSearch} className="btn2 mb-5 unEm">Buscar<FontAwesomeIcon icon={faMagnifyingGlass} className='ms-1'/></button>
+                    <button onClick={handleSearch} className="btn2 py-4 mb-5">Buscar<FontAwesomeIcon icon={faMagnifyingGlass} className='ms-1'/></button>
                 </div>
                 <div className="form-group p-2 table-responsive card">
                     <div className="card-header">
@@ -218,24 +218,26 @@ const Inscriptos = () => {
                     <table  className="mt-5 mb-5 table">
                         <thead>
                             <tr className='th-header'>
-                                <th className='th-nouns' scope="col">Nombre</th>
-                                <th className='th-nouns' scope="col">Apellido</th>
+                                <th className='th-nouns d-none d-lg-table-cell' scope="col">Nombre</th>
+                                <th className='th-nouns d-none d-lg-table-cell' scope="col">Apellido</th>
+                                <th className='th-nouns d-table-cell d-lg-none' scope="col">Nombre y<br />Apellido</th>
                                 <th className='th-nouns' scope="col">DNI</th>
-                                <th className='th-nouns' scope="col">Pago</th>
-                                <th className='th-nouns' scope="col">Nacimiento</th>
-                                <th className='th-nouns' scope="col">Inscribió</th>
+                                <th className='th-nouns d-none d-sm-table-cell' scope="col">Pago</th>
+                                <th className='th-nouns d-none d-lg-table-cell' scope="col">Nacimiento</th>
+                                <th className='th-nouns d-none d-sm-table-cell' scope="col">Inscribió</th>
                                 <th className='th-nouns' scope="col">Ficha Completa</th>
                             </tr>
                         </thead>
                         {studentsData.map(student =>                  
                             <tbody key={student._id}>
                                 <tr>
-                                    <td className='td-border'>{student.firstName}</td>
-                                    <td className='td-border'>{student.lastName}</td>
+                                    <td className='td-border d-none d-lg-table-cell'>{student.firstName}</td>
+                                    <td className='td-border d-none d-lg-table-cell'>{student.lastName}</td>
+                                    <td className='td-border d-table-cell d-lg-none'>{student.firstName}<br />{student.lastName}</td>
                                     <td className='td-border'>{student.dni}</td>
-                                    <td className='td-border'>{student.itsPaid === false ? ('Pendiente') : ('Efectuado') }</td>
-                                    <td className='td-border'>{new Date(student.birth).toISOString().slice(0, 10)}</td>
-                                    <td className='td-border'>{new Date(student.registrationDate).toISOString().slice(0, 10)}</td>
+                                    <td className='td-border d-none d-sm-table-cell'>{student.itsPaid === false ? ('Pendiente') : ('Efectuado') }</td>
+                                    <td className='td-border d-none d-lg-table-cell'>{new Date(student.birth).toISOString().slice(0, 10)}</td>
+                                    <td className='td-border d-none d-sm-table-cell'>{new Date(student.registrationDate).toISOString().slice(0, 10)}</td>
                                     <td className='td-border'>
                                         <Button className='button-ficha' onClick={handleShow(student)}>
                                             Ver Ficha

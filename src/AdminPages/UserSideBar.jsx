@@ -18,10 +18,10 @@ const UserSideBar = () => {
                             </div>
                             <hr/>
                             <ul className="nav nav-pills flex-column ">
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mt-5 mb-5 my-2'><Link to={'/ici'} className="nav-link p-4">INSCRIPTOS<FontAwesomeIcon icon={faChildren} className='mx-2' /></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/inscripcion'} className="nav-link p-4">USUARIOS<FontAwesomeIcon icon={faUsers} className='mx-2'/></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/contacto'} className="nav-link p-4">CONFIGURACION<FontAwesomeIcon icon={faGears} className='mx-2'/></Link></li>
-                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/ici/viajes'} className="nav-link p-4">SOPORTE<FontAwesomeIcon icon={faComments} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link mt-5 mb-5 my-2'><Link to={'/usuario/inscriptos'} className="nav-link p-4">INSCRIPTOS<FontAwesomeIcon icon={faChildren} className='mx-2' /></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/usuario/usuarios'} className="nav-link p-4">USUARIOS<FontAwesomeIcon icon={faUsers} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><Link to={'/usuario/configuracion'} className="nav-link p-4">CONFIGURACION<FontAwesomeIcon icon={faGears} className='mx-2'/></Link></li>
+                                <li onClick={() => sideBarOpen() } className='div-nav-link mb-5 my-2'><a className="nav-link p-4">SOPORTE<FontAwesomeIcon icon={faComments} className='mx-2'/></a></li>
                             </ul>
                             <hr/>
                         </div> 
