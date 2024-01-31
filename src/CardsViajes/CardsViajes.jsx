@@ -13,7 +13,8 @@ const CardsViajes = () => {
             <Card className= 'collapsed-card cardExams m-4'>
                 <Card.Body>
                     <Card.Title><h3>Viajes Educativos</h3></Card.Title>
-                    <h5>Existen dos salidas grupales por año – enero y julio, las cuales incluyen la conducción permanente de uno o más líderes/monitores de grupo durante todo el viaje. A su vez, también es posible viajar en forma individual en cualquier otra época del año.</h5>
+                    <h5>Contamos con  viajes educativos y turismo idiomático dirigido tanto a alumnos  como profesores con cursada y estadía en Chichester  College con salidas grupales en Enero y Julio así como individuales  durante todo el año.
+Los mismos incluyen conducción y monitoreo permanente a cargo de uno o más líderes de grupo durante todo el viaje.</h5>
                     <a target='_blank' className='dosEm' href="https://www.angliaexams.com/study-trips">Mas Informacion...</a>
                 </Card.Body>
             </Card>
