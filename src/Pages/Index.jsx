@@ -7,9 +7,6 @@ const Index = () => {
         <div id='index' className='padding-foot'>
             <CarouselIndex/>
             <div className='card card-index w-75'>
-                <div className='card-header'>
-                    <section className='text-header'>Nosotros</section>
-                </div>
                 <div className='card-body'>
                     <a className='a-anglia' target='_blank' href="https://www.anglia.org/">
                         <div className='fade-header' >
@@ -35,7 +32,7 @@ const Index = () => {
                     </a>
                     <div className='th-header mt-4'>
                         <div className='th-nouns bg-white'>
-                            <h2 className='dosYmedioEm font-weight-bold'>Ofrecemos un programa completo y estructurado para evaluar el idioma ingles</h2>
+                            <h2 className='dosYmedioEm font-weight-bold'>Ofrecemos un programa completo y progresivo para evaluar el idioma ingles</h2>
                             <h3 className='dosEm'>Nuestros cursos van desde lo más básico hasta la capacitación para teachers, los exámenes dados por Anglia están alineados al Marco Común Europeo de Referencia (MCER), que es un estándar internacional para definir la capacidad lingüística.</h3>
                         </div>
                     </div>

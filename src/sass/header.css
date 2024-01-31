@@ -11,8 +11,12 @@
   font-size: 2em;
   font-weight: bolder;
 }
-#header .imgdiv img {
-  width: 80%;
+#header header .header-img-div {
+  width: 20%;
+  margin-bottom: 1%;
+}
+#header header .header-img-div .imgdiv img {
+  width: 100%;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.604);
   border-radius: 1%;
 }
@@ -192,6 +196,9 @@
   }
 }
 @media screen and (max-width: 1266px) {
+  #header header .header-img-div {
+    width: 22%;
+  }
   #header .fadeHeader .text-end {
     width: 10%;
   }
@@ -215,20 +222,35 @@
     margin-top: 10%;
   }
   #header .borderHeader {
-    margin-top: 8%;
+    margin-top: 5%;
+  }
+  #header header .header-img-div {
+    width: 30%;
+    margin-bottom: 1%;
   }
 }
 @media screen and (max-width: 767px) {
   #header .fadeHeader .text-end {
     width: 15%;
   }
+  #header header .header-img-div {
+    width: 40%;
+    margin-bottom: 1%;
+  }
   #header .borderHeader {
-    margin-top: 10%;
+    margin-top: 6%;
   }
 }
 @media screen and (max-width: 580px) {
   #header .fadeHeader .text-end {
     width: 19%;
+  }
+  #header header .header-img-div {
+    width: 55%;
+    margin-bottom: 1%;
+  }
+  #header .borderHeader {
+    margin-top: 7%;
   }
   .activeSideBar {
     transform: translate3d(70vw, 0px, 0px) !important;
@@ -240,6 +262,13 @@
 @media screen and (max-width: 420px) {
   #header .fadeHeader .text-end {
     width: 22%;
+  }
+  #header header .header-img-div {
+    width: 65%;
+    margin-bottom: 1%;
+  }
+  #header .borderHeader {
+    margin-top: 8%;
   }
   .activeSideBar {
     transform: translate3d(75vw, 0px, 0px) !important;
@@ -258,7 +287,11 @@
     width: 25%;
   }
   #header .borderHeader {
-    margin-top: 13%;
+    margin-top: 12%;
+  }
+  #header header .header-img-div {
+    width: 75%;
+    margin-bottom: 1%;
   }
   .activeSideBar {
     transform: translate3d(90vw, 0px, 0px) !important;
@@ -278,5 +311,9 @@
   }
   #sideBar .sideBarDiv {
     width: 99vw;
+  }
+  #header header .header-img-div {
+    width: 90%;
+    margin-bottom: 1%;
   }
 }/*# sourceMappingURL=header.css.map */

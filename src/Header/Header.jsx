@@ -25,7 +25,7 @@ const Header = () => {
         <div id='header'>
             <h1>Centro Oficial Anglia Exams</h1>
             <header className="d-flex p-4 justify-content-around py-2 py-sm-1">
-                <div className="col-9 col-sm-4 col-md-3 col-lg-2 col-xl-2 py-2">
+                <div className="header-img-div">
                     <div className="d-inline-flex link-body-emphasis text-decoration-none">
                         <div className='imgdiv' role="img">
                             <img className='rounded' src="https://res.cloudinary.com/dsdicaf5h/image/upload/v1697556868/ici/logo_ICI_2322_sfamnp.png" alt="" />
@@ -56,7 +56,7 @@ const Header = () => {
             <div className='borderHeader'>
                 <div className="border-header-div d-flex d-lg-none">
                     <div className="div-nav-link menuMovileDiv">
-                        <button onClick={() => sideBarOpen() } type='button' className='nav-link d-flex flex-row menuMovile p-4' >MENU
+                        <button onClick={() => sideBarOpen() } type='button' className='nav-link d-flex flex-row menuMovile p-3' >MENU
                         <FontAwesomeIcon icon={faBars} className='ms-2' />
                         </button>
                     </div>

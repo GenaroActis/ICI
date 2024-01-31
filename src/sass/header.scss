@@ -10,13 +10,20 @@
         font-size: 2em;
         font-weight: bolder;
     }
-    .imgdiv{
-        img{
-            width: 80%;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.604);
-            border-radius: 1%;
+    header{
+        .header-img-div{
+        width: 20%;
+        margin-bottom: 1%;
+            .imgdiv{
+                img{
+                    width: 100%;
+                    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.604);
+                    border-radius: 1%;
+                }
+            }
         }
     }
+    
     // .fadeHeader{
     //     .text-end{
     //         position: fixed;
@@ -231,6 +238,11 @@
 
 @media screen and (max-width: 1266px){
     #header{
+        header{
+            .header-img-div{
+            width: 22%;
+            }
+        }
         .fadeHeader{
             .text-end{
                 width: 10%;
@@ -261,7 +273,13 @@
             margin-top: 10%;
         }
         .borderHeader{
-            margin-top: 8%;
+            margin-top: 5%;
+        }
+        header{
+            .header-img-div{
+            width: 30%;
+            margin-bottom: 1%;
+            }
         }
     }
 }
@@ -272,8 +290,14 @@
                 width: 15%;
             }
         }
+        header{
+            .header-img-div{
+            width: 40%;
+            margin-bottom: 1%;
+            }
+        }
         .borderHeader{
-            margin-top: 10%;    
+            margin-top: 6%;
         }
     }
 }
@@ -283,6 +307,15 @@
             .text-end{
                 width: 19%;
             }
+        }
+        header{
+            .header-img-div{
+            width: 55%;
+            margin-bottom: 1%;
+            }
+        }
+        .borderHeader{
+            margin-top: 7%;
         }
     }
     .activeSideBar {
@@ -300,6 +333,15 @@
             .text-end{
                 width: 22%;
             }
+        }
+        header{
+            .header-img-div{
+            width: 65%;
+            margin-bottom: 1%;
+            }
+        }
+        .borderHeader{
+            margin-top: 8%;
         }
     }
     .activeSideBar {
@@ -326,7 +368,13 @@
             }
         }
         .borderHeader{
-            margin-top: 13%;
+            margin-top: 12%;
+        }
+        header{
+            .header-img-div{
+            width: 75%;
+            margin-bottom: 1%;
+            }
         }
     }
     .activeSideBar {
@@ -352,6 +400,14 @@
     #sideBar{
         .sideBarDiv{
             width: 99vw;
+        }
+    }
+    #header{
+        header{
+            .header-img-div{
+            width: 90%;
+            margin-bottom: 1%;
+            }
         }
     }
 }
